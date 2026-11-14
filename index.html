@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI na Pastelce – vzdělávací portál o umělé inteligenci pro žáky, učitele a rodiče.">
+  <meta name="theme-color" content="#172554">
+  <title>AI na Pastelce | Objevujeme svět umělé inteligence</title>
+  <style>
+    :root {
+      --navy: #172554;
+      --blue: #1e3a8a;
+      --teal: #0f766e;
+      --yellow: #facc15;
+      --ink: #172033;
+      --muted: #64748b;
+      --paper: #f8fafc;
+      --line: #e2e8f0;
+      --white: #ffffff;
+      --radius: 22px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); line-height: 1.6; }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header { background: var(--navy); color: var(--white); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 800; letter-spacing: -.03em; font-size: 1.18rem; }
+    .brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 14px; background: var(--yellow); color: var(--navy); font-size: 1.35rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 22px; }
+    nav a { text-decoration: none; color: #dbeafe; font-size: .94rem; font-weight: 600; }
+    nav a:hover { color: var(--yellow); }
+    .hero { padding: 78px 0 88px; background: radial-gradient(circle at 84% 20%, rgba(45,212,191,.22), transparent 27%), linear-gradient(135deg, #172554, #1e3a8a); color: white; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 44px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: #fde68a; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; font-size: .76rem; }
+    h1 { font-size: clamp(2.6rem, 6vw, 4.7rem); line-height: 1.04; letter-spacing: -.055em; margin: 16px 0 20px; max-width: 720px; }
+    .hero p { color: #dbeafe; font-size: 1.13rem; max-width: 620px; margin: 0 0 30px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; padding: 13px 20px; border-radius: 14px; background: var(--yellow); color: var(--navy); text-decoration: none; font-weight: 800; box-shadow: 0 8px 22px rgba(0,0,0,.15); transition: transform .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .hero-art { min-height: 280px; display: grid; place-items: center; position: relative; }
+    .orbit { width: min(290px, 75vw); aspect-ratio: 1; border: 1px solid rgba(255,255,255,.22); border-radius: 50%; display: grid; place-items: center; position: relative; background: rgba(255,255,255,.06); }
+    .orbit:before, .orbit:after { content: ""; position: absolute; border: 1px dashed rgba(255,255,255,.28); border-radius: 50%; inset: 22px; }
+    .orbit:after { inset: 52px; }
+    .ai-core { width: 128px; height: 128px; display: grid; place-items: center; border-radius: 36px; background: var(--yellow); color: var(--navy); font-size: 2.4rem; font-weight: 900; transform: rotate(-7deg); box-shadow: 0 18px 40px rgba(0,0,0,.2); z-index: 1; }
+    .bubble { position: absolute; display: grid; place-items: center; width: 54px; height: 54px; border-radius: 18px; font-size: 1.5rem; box-shadow: 0 10px 25px rgba(0,0,0,.15); }
+    .b1 { top: 12px; left: 38px; background: #ccfbf1; }
+    .b2 { right: 8px; top: 72px; background: #ede9fe; }
+    .b3 { bottom: 12px; left: 54px; background: #fee2e2; }
+    .b4 { bottom: 34px; right: 26px; background: #dbeafe; }
+    section { padding: 70px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 28px; }
+    .section-head h2 { margin: 0; color: var(--navy); font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -.04em; }
+    .section-head p { color: var(--muted); max-width: 470px; margin: 0; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 25px; min-height: 220px; box-shadow: 0 8px 26px rgba(15,23,42,.035); }
+    .card-icon { width: 54px; height: 54px; display: grid; place-items: center; border-radius: 17px; font-size: 1.65rem; margin-bottom: 18px; }
+    .mint { background: #ccfbf1; } .gold { background: #fef3c7; } .lilac { background: #ede9fe; } .rose { background: #ffe4e6; } .sky { background: #dbeafe; } .green { background: #dcfce7; }
+    .card h3 { margin: 0 0 8px; color: var(--navy); font-size: 1.2rem; }
+    .card p { margin: 0; color: var(--muted); }
+    .card a { display: inline-block; margin-top: 17px; color: var(--teal); font-weight: 800; text-decoration: none; }
+    .feature { background: #eef2ff; }
+    .feature-box { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; background: white; border: 1px solid #dbeafe; border-radius: 28px; padding: 34px; }
+    .feature h2 { color: var(--navy); font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.1; margin: 0 0 14px; letter-spacing: -.04em; }
+    .feature p { color: var(--muted); margin: 0 0 20px; }
+    .mission-art { min-height: 220px; display: grid; place-items: center; border-radius: 22px; background: linear-gradient(135deg, #ccfbf1, #dbeafe 55%, #ede9fe); font-size: 5rem; }
+    .audience { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .audience .card { min-height: 0; }
+    footer { background: var(--navy); color: #cbd5e1; padding: 30px 0; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+    footer strong { color: white; }
+    .note { font-size: .88rem; color: #94a3b8; }
+    @media (max-width: 760px) {
+      .nav { padding: 16px 0; align-items: flex-start; flex-direction: column; }
+      nav { gap: 12px 18px; }
+      .hero { padding: 58px 0 62px; }
+      .hero-grid, .feature-box { grid-template-columns: 1fr; }
+      .hero-art { min-height: 240px; }
+      .cards { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 10px; }
+      .audience { grid-template-columns: 1fr; }
+      section { padding: 54px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#" aria-label="AI na Pastelce – úvodní stránka">
+        <span class="brand-mark">✦</span><span>AI na Pastelce</span>
+      </a>
+      <nav aria-label="Hlavní navigace">
+        <a href="#objevuj">Objevuj</a>
+        <a href="#mise">AI detektiv</a>
+        <a href="#pro-koho">Pro učitele a rodiče</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">✦ Vzdělávací svět ZŠ a MŠ Mladá Boleslav</div>
+          <h1>Objevujeme, tvoříme a učíme se žít s umělou inteligencí.</h1>
+          <p>Hraj si, zkoušej nové věci, přemýšlej a zjisti, jak umělá inteligence funguje – a jak ji používat chytře a bezpečně.</p>
+          <a class="button" href="#objevuj">Vydej se na průzkum&nbsp; →</a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit">
+            <span class="bubble b1">✏️</span><span class="bubble b2">💡</span>
+            <span class="bubble b3">🎨</span><span class="bubble b4">🔎</span>
+            <div class="ai-core">AI</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="objevuj">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Vyber si, co chceš objevovat</h2>
+          <p>Čekají tě hry, tvoření i výzvy, které ti pomohou lépe porozumět umělé inteligenci.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon mint">🎮</div>
+            <h3>Hraj si s AI</h3>
+            <p>Vyzkoušej zábavné hry a zjisti, jak se počítač učí rozpoznávat svět kolem nás.</p>
+            <a href="#mise">Prozkoumat hry →</a>
+          </article>
+          <article class="card">
+            <div class="card-icon gold">🎨</div>
+            <h3>Tvoř s AI</h3>
+            <p>Proměň nápady v obrázky, příběhy a další kreativní projekty.</p>
+            <a href="#mise">Objevit tvoření →</a>
+          </article>
+          <article class="card">
+            <div class="card-icon lilac">🔎</div>
+            <h3>Staň se AI detektivem</h3>
+            <p>Hledej stopy, odhaluj nesrovnalosti a uč se ověřovat informace.</p>
+            <a href="#mise">Přijmout výzvu →</a>
+          </article>
+          <article class="card">
+            <div class="card-icon rose">🛡️</div>
+            <h3>Bezpečně s AI</h3>
+            <p>Poznej pravidla, která ti pomohou chránit soukromí a nenechat se napálit.</p>
+            <a href="#pro-koho">Zjistit více →</a>
+          </article>
+          <article class="card">
+            <div class="card-icon sky">🧠</div>
+            <h3>Pochop, jak AI funguje</h3>
+            <p>Seznam se s umělou inteligencí jednoduše, na příkladech a vlastním zkoušením.</p>
+            <a href="#mise">Začít objevovat →</a>
+          </article>
+          <article class="card">
+            <div class="card-icon green">🌱</div>
+            <h3>Galerie nápadů</h3>
+            <p>Prohlédni si projekty, které vznikly při školních aktivitách a workshopech.</p>
+            <a href="#pro-koho">Prohlédnout inspiraci →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature" id="mise">
+      <div class="wrap feature-box">
+        <div>
+          <div class="eyebrow" style="color:#0f766e">Výzva pro zvídavé</div>
+          <h2>AI detektiv: každá stopa se počítá.</h2>
+          <p>Čeká tě svět záhad, obrázků, otázek a chytrých rozhodnutí. Dokážeš poznat, co je skutečné, co vytvořila AI a čemu je potřeba věnovat pozornost?</p>
+          <span class="note">Mise a kvízy právě připravujeme.</span>
+        </div>
+        <div class="mission-art" aria-hidden="true">🕵️‍♀️💻</div>
+      </div>
+    </section>
+
+    <section id="pro-koho">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>AI na Pastelce je tu pro všechny</h2>
+          <p>Materiály budeme postupně rozšiřovat tak, aby si tu každý našel něco užitečného.</p>
+        </div>
+        <div class="audience">
+          <article class="card">
+            <div class="card-icon gold">👩‍🏫</div>
+            <h3>Pro učitele</h3>
+            <p>Metodiky, inspirace do výuky, ověřené nástroje a náměty na aktivity.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon mint">👨‍👩‍👧</div>
+            <h3>Pro rodiče</h3>
+            <p>Srozumitelné informace, tipy pro bezpečné používání technologií a náměty k rozhovorům s dětmi.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div><strong>AI na Pastelce</strong><br><span class="note">Objevujeme svět umělé inteligence společně.</span></div>
+      <div class="note">Vzdělávací projekt ZŠ a MŠ Mladá Boleslav</div>
+    </div>
+  </footer>
+</body>
+</html>
