@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tvůrčí dílna AI na Pastelce – kreslení, animace, promyšlené zadávání pokynů a žákovské projekty s umělou inteligencí.">
+  <title>Tvoř s AI | AI na Pastelce</title>
+  <style>
+    :root{--navy:#14243b;--navy2:#1d3450;--ink:#203047;--muted:#65748a;--paper:#f5f7fb;--white:#fff;--mint:#dff5ee;--teal:#167c70;--gold:#f5d36d;--lilac:#eee8ff;--rose:#ffe8ed;--line:#e4eaf1;--shadow:0 14px 36px rgba(20,36,59,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}a{color:inherit}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}
+    header{background:var(--navy);color:white;padding:18px 0}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:800;letter-spacing:.02em;text-decoration:none}.back{color:#dbe7f5;text-decoration:none;font-size:.94rem}.back:hover{text-decoration:underline}
+    .hero{background:linear-gradient(135deg,var(--navy),#244d65);color:white;padding:76px 0 70px;position:relative;overflow:hidden}.hero:after{content:"✦";position:absolute;right:9%;top:15px;font-size:190px;color:rgba(255,255,255,.06)}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;font-weight:800;color:#a9e5d6}.hero h1{font-size:clamp(2.5rem,6vw,4.6rem);line-height:1.05;margin:14px 0 18px;max-width:760px}.hero p{font-size:1.15rem;color:#e0eaf3;max-width:720px;margin:0}.hero-note{display:inline-flex;margin-top:26px;padding:9px 15px;border:1px solid rgba(255,255,255,.24);border-radius:999px;color:#f7e7a6;font-size:.9rem}
+    section{padding:58px 0}.section-head{max-width:720px;margin-bottom:28px}.section-head h2{font-size:clamp(1.7rem,3vw,2.35rem);line-height:1.2;margin:0 0 10px;color:var(--navy)}.section-head p{margin:0;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:25px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:flex-start}.icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-size:1.45rem;margin-bottom:15px}.mint{background:var(--mint)}.gold{background:#fff4d3}.lilac{background:var(--lilac)}.rose{background:var(--rose)}.card h3{font-size:1.25rem;color:var(--navy);margin:0 0 8px}.card p{margin:0 0 16px;color:var(--muted)}.tag{font-size:.76rem;font-weight:750;letter-spacing:.04em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}.link{margin-top:auto;color:var(--teal);font-weight:800;text-decoration:none}.link:hover{text-decoration:underline}.feature{background:#eaf5f2;border-radius:24px;padding:30px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}.feature h2{margin:0 0 10px;color:var(--navy);font-size:1.7rem}.feature p{margin:0;color:#4f6472}.feature-art{background:linear-gradient(135deg,#d7f0e8,#fff1c7);border-radius:20px;min-height:170px;display:grid;place-items:center;font-size:4.5rem}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{background:white;border:1px solid var(--line);border-radius:16px;padding:20px}.num{width:30px;height:30px;border-radius:50%;background:var(--navy);color:white;display:grid;place-items:center;font-weight:800;margin-bottom:12px}.step h3{margin:0 0 6px;color:var(--navy);font-size:1.05rem}.step p{margin:0;color:var(--muted);font-size:.94rem}.notice{border-left:4px solid #e5bd4e;background:#fff8e5;padding:17px 20px;border-radius:0 14px 14px 0;color:#66562c;margin-top:22px}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.gallery article{background:white;border:1px solid var(--line);border-radius:18px;padding:22px}.gallery .emoji{font-size:2rem}.gallery h3{margin:10px 0 6px;color:var(--navy);font-size:1.08rem}.gallery p{margin:0;color:var(--muted);font-size:.94rem}.cta{background:var(--navy);color:white;border-radius:24px;padding:32px;display:flex;align-items:center;justify-content:space-between;gap:24px}.cta h2{margin:0 0 6px;font-size:1.65rem}.cta p{margin:0;color:#d5e0ec}.button{display:inline-block;background:var(--gold);color:var(--navy);font-weight:850;text-decoration:none;padding:12px 18px;border-radius:12px;white-space:nowrap}.button:hover{filter:brightness(1.04)}footer{padding:28px 0;color:var(--muted);font-size:.9rem;text-align:center}
+    @media(max-width:760px){.grid,.feature{grid-template-columns:1fr}.steps,.gallery{grid-template-columns:1fr}.hero{padding:58px 0}.cta{align-items:flex-start;flex-direction:column}.wrap{width:min(100% - 28px,1100px)}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap nav"><a class="brand" href="index.html">✦ AI na Pastelce</a><a class="back" href="index.html">← Zpět na hlavní stránku</a></div></header>
+  <main>
+    <section class="hero"><div class="wrap"><div class="eyebrow">Tvůrčí dílna</div><h1>Tvoř s AI</h1><p>Vyzkoušej, jak se z obyčejného nápadu může stát obrázek, animace nebo vlastní projekt. Umělá inteligence může být kreativním pomocníkem – důležité je vědět, jak ji vést a jak přemýšlet nad výsledkem.</p><div class="hero-note">🎨 Nápad · experiment · vlastní tvorba</div></div></section>
+
+    <section><div class="wrap"><div class="section-head"><h2>Vyzkoušej si tvoření</h2><p>Krátké aktivity, ve kterých můžeš experimentovat, porovnávat výsledky a hledat vlastní nápady.</p></div>
+      <div class="grid">
+        <article class="card"><div class="icon mint">✏️</div><div class="tag">Kreslení s pomocníkem</div><h3>AutoDraw</h3><p>Nakresli jednoduchý obrázek a sleduj, jak nástroj rozpoznává tvoje tahy a nabízí upravené kresby. Vyber si návrh, který nejlépe vystihuje tvůj nápad.</p><a class="link" href="https://www.autodraw.com/" target="_blank" rel="noopener noreferrer">Otevřít AutoDraw ↗</a></article>
+        <article class="card"><div class="icon lilac">🕺</div><div class="tag">Animace</div><h3>Animated Drawings</h3><p>Proměň vlastní kresbu postavy v jednoduchou animaci. Pozoruj, jak technologie odhaduje části těla a připravuje postavu k pohybu.</p><a class="link" href="https://sketch.metademolab.com/" target="_blank" rel="noopener noreferrer">Vyzkoušet animaci ↗</a></article>
+      </div>
+    </div></section>
+
+    <section style="padding-top:0"><div class="wrap"><div class="feature"><div><div class="tag">Žákovský projekt</div><h2>Od kresby k AI realitě</h2><p>Co se stane, když vlastní kresbu a představivost propojíš s umělou inteligencí? V projektu žáci zkoumali, jak lze nápad rozvíjet pomocí AI a jak se původní kresba promění ve výsledek, který může vypadat jako skutečnost. Důležité je sledovat, co zůstalo podle zadání a co AI sama pozměnila.</p></div><div class="feature-art" aria-hidden="true">🖍️ ➜ ✨</div></div></div></section>
+
+    <section><div class="wrap"><div class="section-head"><h2>Jak zadávat AI dobré pokyny?</h2><p>Výsledek často závisí na tom, jak přesně svůj nápad popíšeš. Vyzkoušej jednoduchý postup.</p></div><div class="steps">
+      <article class="step"><div class="num">1</div><h3>Řekni, co chceš</h3><p>Popiš hlavní námět – například „vymysli obrázek města budoucnosti“.</p></article>
+      <article class="step"><div class="num">2</div><h3>Doplň podrobnosti</h3><p>Přidej prostředí, náladu, barvy nebo styl. Čím jasnější představa, tím lépe.</p></article>
+      <article class="step"><div class="num">3</div><h3>Prohlédni a uprav</h3><p>Zkontroluj výsledek. Co se povedlo? Co AI pochopila jinak? Zkus pokyn zpřesnit.</p></article>
+    </div><div class="notice"><strong>Pamatuj:</strong> Do veřejných nástrojů AI nevkládej osobní údaje, soukromé fotografie ani informace o sobě či spolužácích. Při práci se řiď pokyny učitele a pravidly daného nástroje.</div></div></section>
+
+    <section style="padding-top:0"><div class="wrap"><div class="section-head"><h2>Co tvoříme a objevujeme</h2><p>Naše tvůrčí práce nejsou jen o hezkém výsledku. Ukazují také, jak přemýšlíme, zkoušíme různé postupy a učíme se s AI spolupracovat.</p></div><div class="gallery">
+      <article><div class="emoji">🖼️</div><h3>Od kresby k AI realitě</h3><p>Proměna vlastního nápadu a kresby s pomocí AI.</p></article>
+      <article><div class="emoji">💬</div><h3>Umění správného zadání</h3><p>Jak popsat svou představu, doplnit detaily a postupně vylepšovat výsledek.</p></article>
+      <article><div class="emoji">🔍</div><h3>AI není dokonalá</h3><p>Porovnávání výsledků, hledání nepřesností a přemýšlení nad tím, co vytvořil člověk a co nástroj.</p></article>
+    </div></div></section>
+
+    <section style="padding-top:0"><div class="wrap"><div class="cta"><div><h2>Chceš zkusit další experiment?</h2><p>Vrať se do herního světa a objev, jak se umělá inteligence učí.</p></div><a class="button" href="hraj-si-s-ai.html">Zpět na Hraj si s AI →</a></div></div></section>
+  </main>
+  <footer><div class="wrap">AI na Pastelce · Vzděláváme se, tvoříme a přemýšlíme o umělé inteligenci.</div></footer>
+</body>
+</html>
