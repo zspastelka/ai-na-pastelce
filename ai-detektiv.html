@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Staň se AI detektivem. Uč se ověřovat obrázky, videa a informace vytvořené umělou inteligencí.">
+  <title>AI detektiv – AI na Pastelce</title>
+  <style>
+    :root{--navy:#14243b;--navy2:#203651;--ink:#243449;--muted:#617187;--paper:#f5f7fb;--white:#fff;--mint:#d9f3ec;--teal:#168b83;--gold:#f4d77c;--rose:#f8dfe2;--line:#e2e8f0;--lilac:#e9e2fa}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+    a{color:#087d78;font-weight:700}a:focus,button:focus{outline:3px solid #e5b83e;outline-offset:3px}
+    .hero{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:30px 20px 54px}
+    .wrap{max-width:1020px;margin:0 auto}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.brand{font-weight:800;letter-spacing:.03em;color:#fff;text-decoration:none}.back{color:#fff;text-decoration:none;border:1px solid #ffffff55;padding:8px 13px;border-radius:999px;font-size:.92rem}
+    .eyebrow{margin:44px 0 8px;color:#a8e5d7;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800}.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.08;margin:0 0 16px;max-width:760px}.hero p{font-size:1.1rem;max-width:720px;color:#e3eaf2;margin:0}
+    main{padding:34px 20px 70px}.intro{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;margin-top:-58px;box-shadow:0 12px 32px #14243b12}.intro strong{color:var(--navy)}
+    .section{margin-top:42px}.section h2{font-size:1.7rem;color:var(--navy);margin:0 0 8px}.lead{color:var(--muted);margin:0 0 20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px}.icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;font-size:1.45rem;margin-bottom:12px}.mint{background:var(--mint)}.gold{background:#fff3cc}.lilac{background:var(--lilac)}.rose{background:var(--rose)}.card h3{margin:0 0 7px;color:var(--navy);font-size:1.12rem}.card p{margin:0;color:var(--muted)}
+    .steps{counter-reset:step;display:grid;gap:12px}.step{display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:15px;padding:17px}.num{width:40px;height:40px;border-radius:50%;background:var(--mint);color:#126c65;font-weight:800;display:grid;place-items:center}.step h3{margin:0 0 4px;color:var(--navy);font-size:1.05rem}.step p{margin:0;color:var(--muted)}
+    .callout{background:#fff8e3;border-left:5px solid #e5bd4f;border-radius:12px;padding:18px 20px;margin-top:18px}.callout strong{color:var(--navy)}
+    .challenge{background:var(--navy);color:#fff;border-radius:20px;padding:24px}.challenge h2{color:#fff;margin-top:0}.challenge p{color:#e3eaf2}.challenge ul{padding-left:21px}.challenge li{margin:7px 0}
+    .resource{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px}.resource p{margin:3px 0 0;color:var(--muted)}.pill{display:inline-block;background:var(--mint);color:#126c65;text-decoration:none;padding:10px 15px;border-radius:999px;white-space:nowrap}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;padding:22px}
+    @media(max-width:560px){.hero{padding-bottom:70px}.intro{padding:19px}.step{grid-template-columns:38px 1fr;padding:14px}.num{width:36px;height:36px}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="top"><a class="brand" href="index.html">AI NA PASTELCE</a><a class="back" href="index.html">← Zpět na hlavní stránku</a></div>
+      <div class="eyebrow">Mise č. 4 · Kritické myšlení</div>
+      <h1>Staň se AI detektivem 🔎</h1>
+      <p>Obrázek ani video nemusí ukazovat skutečnost. Nauč se hledat souvislosti, ověřovat zdroje a nepodlehnout prvnímu dojmu.</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="intro"><strong>Úkol detektiva:</strong> Nejde o to poznat každý obrázek na první pohled. Důležitější je umět se zastavit, položit správné otázky a ověřit si, odkud informace pochází.</div>
+
+    <section class="section">
+      <h2>🕵️ Co může být podezřelé?</h2>
+      <p class="lead">U obrázků a videí vytvořených nebo upravených AI si všímej detailů. Žádný z nich ale sám o sobě není spolehlivým důkazem.</p>
+      <div class="grid">
+        <article class="card"><div class="icon mint">🖐️</div><h3>Neobvyklé detaily</h3><p>Podívej se na ruce, prsty, zuby, šperky nebo drobné předměty. Někdy nedávají smysl.</p></article>
+        <article class="card"><div class="icon gold">🔤</div><h3>Text a nápisy</h3><p>Nápisy na cedulích, oblečení nebo obalech mohou být nečitelné, pomíchané či nesmyslné.</p></article>
+        <article class="card"><div class="icon lilac">🌗</div><h3>Světlo a stíny</h3><p>Všímej si odlesků, stínů a perspektivy. Odpovídají tomu, jak je scéna nasvícená?</p></article>
+        <article class="card"><div class="icon rose">🧩</div><h3>Souvislosti</h3><p>Odpovídá obrázek popisku, místu a události? Není fotografie použitá v jiném kontextu?</p></article>
+      </div>
+      <div class="callout"><strong>Pozor:</strong> AI obrázky jsou stále přesvědčivější a také skutečné fotografie mohou být upravené. Podle samotných vizuálních znaků proto nikdy nedělej konečný závěr.</div>
+    </section>
+
+    <section class="section">
+      <h2>🧭 Čtyři kroky ověřování</h2>
+      <p class="lead">Když narazíš na překvapivý obrázek, video nebo zprávu, postupuj jako detektiv.</p>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div><h3>Zastav se</h3><p>Vyvolává obsah silné emoce, strach nebo vztek? Právě tehdy je dobré nesdílet ho okamžitě.</p></div></div>
+        <div class="step"><div class="num">2</div><div><h3>Najdi původ</h3><p>Kdo obsah zveřejnil? Je uveden autor, datum a původní zdroj? Nejde jen o anonymní příspěvek?</p></div></div>
+        <div class="step"><div class="num">3</div><div><h3>Porovnej informace</h3><p>Potvrzují stejnou zprávu i další důvěryhodné a na sobě nezávislé zdroje?</p></div></div>
+        <div class="step"><div class="num">4</div><div><h3>Rozhodni se</h3><p>Pokud si nejsi jistý/jistá, obsah dál nesdílej jako fakt. Přiznat nejistotu je lepší než šířit omyl.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="challenge">
+        <h2>🎯 Detektivní výzva</h2>
+        <p>Vyzkoušej si, jak snadné je splést si skutečný a uměle vytvořený obrázek.</p>
+        <ul>
+          <li>Prohlédni si každý obrázek pozorně.</li>
+          <li>Zkus odhadnout, zda je skutečný, nebo vytvořený AI.</li>
+          <li>Po zobrazení výsledku si všimni, co tě zmátlo.</li>
+        </ul>
+        <p><strong>Nezapomeň:</strong> cílem není získat stoprocentní skóre, ale trénovat pozornost a kritické myšlení.</p>
+        <a class="pill" href="https://ai-vs-real.com/" target="_blank" rel="noopener noreferrer">Vyzkoušet AI vs Real ↗</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>📚 Co vytvořili naši žáci?</h2>
+      <p class="lead">Na projektu AI na Pastelce se žáci sami pustili do pátrání po tom, jak poznat zavádějící obsah a jak o něm přemýšlet.</p>
+      <div class="grid">
+        <article class="card"><div class="icon gold">🖼️</div><h3>Odhalujeme nesrovnalosti v AI obrázcích</h3><p>Žáci hledali zvláštní detaily a chyby ve vygenerovaných obrázcích. Zjišťovali, proč nestačí obrázku jen věřit.</p></article>
+        <article class="card"><div class="icon mint">🛡️</div><h3>Deset pravidel, jak nenaletět AI dezinformacím</h3><p>Žáci sestavili přehled zásad, které pomáhají ověřovat informace a nepodlehnout falešnému obsahu.</p></article>
+      </div>
+      <p class="lead" style="margin-top:14px">Žákovské výstupy a další ukázky najdeš také v naší <a href="index.html">hlavní galerii AI na Pastelce</a>.</p>
+    </section>
+
+    <section class="section">
+      <h2>💬 Zamysli se</h2>
+      <div class="card">
+        <p><strong>1.</strong> Může být skutečná fotografie zavádějící, i když ji nevytvořila AI?</p>
+        <p><strong>2.</strong> Proč nestačí ověřit informaci jen na jednom webu?</p>
+        <p><strong>3.</strong> Co uděláš, když ti kamarád pošle šokující video, u kterého neznáš původ?</p>
+      </div>
+    </section>
+  </main>
+  <footer>AI na Pastelce · Učíme se přemýšlet, ověřovat a tvořit</footer>
+</body>
+</html>
