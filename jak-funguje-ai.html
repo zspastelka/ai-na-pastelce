@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Objev, jak funguje umělá inteligence, jak se učí, proč někdy chybuje a jak s ní bezpečně pracovat.">
+  <title>Pochop, jak AI funguje | AI na Pastelce</title>
+  <style>
+    :root{--navy:#14243b;--navy2:#1d3450;--ink:#203047;--muted:#65748a;--paper:#f5f7fb;--white:#fff;--mint:#dff5ee;--teal:#167c70;--gold:#f5d36d;--lilac:#eee8ff;--rose:#ffe8ed;--line:#e4eaf1;--shadow:0 14px 36px rgba(20,36,59,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}a{color:inherit}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}
+    header{background:var(--navy);color:white;padding:18px 0}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:800;letter-spacing:.02em;text-decoration:none}.back{color:#dbe7f5;text-decoration:none;font-size:.94rem}.back:hover{text-decoration:underline}
+    .hero{background:linear-gradient(135deg,var(--navy),#244d65);color:white;padding:76px 0 70px;position:relative;overflow:hidden}.hero:after{content:"✦";position:absolute;right:9%;top:15px;font-size:190px;color:rgba(255,255,255,.06)}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;font-weight:800;color:#a9e5d6}.hero h1{font-size:clamp(2.5rem,6vw,4.6rem);line-height:1.05;margin:14px 0 18px;max-width:760px}.hero p{font-size:1.15rem;color:#e0eaf3;max-width:720px;margin:0}.hero-note{display:inline-flex;margin-top:26px;padding:9px 15px;border:1px solid rgba(255,255,255,.24);border-radius:999px;color:#f7e7a6;font-size:.9rem}
+    section{padding:58px 0}.section-head{max-width:720px;margin-bottom:28px}.section-head h2{font-size:clamp(1.7rem,3vw,2.35rem);line-height:1.2;margin:0 0 10px;color:var(--navy)}.section-head p{margin:0;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:25px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:flex-start}.icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-size:1.45rem;margin-bottom:15px}.mint{background:var(--mint)}.gold{background:#fff4d3}.lilac{background:var(--lilac)}.rose{background:var(--rose)}.card h3{font-size:1.25rem;color:var(--navy);margin:0 0 8px}.card p{margin:0 0 16px;color:var(--muted)}.tag{font-size:.76rem;font-weight:750;letter-spacing:.04em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}.link{margin-top:auto;color:var(--teal);font-weight:800;text-decoration:none}.link:hover{text-decoration:underline}.feature{background:#eaf5f2;border-radius:24px;padding:30px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}.feature h2{margin:0 0 10px;color:var(--navy);font-size:1.7rem}.feature p{margin:0;color:#4f6472}.feature-art{background:linear-gradient(135deg,#d7f0e8,#fff1c7);border-radius:20px;min-height:170px;display:grid;place-items:center;font-size:4.5rem}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{background:white;border:1px solid var(--line);border-radius:16px;padding:20px}.num{width:30px;height:30px;border-radius:50%;background:var(--navy);color:white;display:grid;place-items:center;font-weight:800;margin-bottom:12px}.step h3{margin:0 0 6px;color:var(--navy);font-size:1.05rem}.step p{margin:0;color:var(--muted);font-size:.94rem}.notice{border-left:4px solid #e5bd4e;background:#fff8e5;padding:17px 20px;border-radius:0 14px 14px 0;color:#66562c;margin-top:22px}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.gallery article{background:white;border:1px solid var(--line);border-radius:18px;padding:22px}.gallery .emoji{font-size:2rem}.gallery h3{margin:10px 0 6px;color:var(--navy);font-size:1.08rem}.gallery p{margin:0;color:var(--muted);font-size:.94rem}.cta{background:var(--navy);color:white;border-radius:24px;padding:32px;display:flex;align-items:center;justify-content:space-between;gap:24px}.cta h2{margin:0 0 6px;font-size:1.65rem}.cta p{margin:0;color:#d5e0ec}.button{display:inline-block;background:var(--gold);color:var(--navy);font-weight:850;text-decoration:none;padding:12px 18px;border-radius:12px;white-space:nowrap}.button:hover{filter:brightness(1.04)}footer{padding:28px 0;color:var(--muted);font-size:.9rem;text-align:center}
+    @media(max-width:760px){.grid,.feature{grid-template-columns:1fr}.steps,.gallery{grid-template-columns:1fr}.hero{padding:58px 0}.cta{align-items:flex-start;flex-direction:column}.wrap{width:min(100% - 28px,1100px)}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap nav"><a class="brand" href="index.html">✦ AI na Pastelce</a><a class="back" href="index.html">← Zpět na hlavní stránku</a></div></header>
+  <main>
+    <section class="hero"><div class="wrap"><div class="eyebrow">Objevuj a přemýšlej</div><h1>Pochop, jak AI funguje</h1><p>Umělá inteligence dnes dokáže odpovídat na otázky, rozpoznávat obrázky nebo vytvářet nové texty. Jak se to ale naučila? Nahlédni pod pokličku AI a zjisti, co umí, kde má své hranice a proč je důležité nad jejími výstupy přemýšlet.</p><div class="hero-note">🧠 Zvědavost · poznávání · kritické myšlení</div></div></section>
+
+    <section><div class="wrap"><div class="section-head"><h2>Co vlastně znamená AI?</h2><p>Umělá inteligence je označení pro technologie, které dokážou plnit úkoly, jež obvykle spojujeme s lidským uvažováním – například pracovat s jazykem, rozpoznávat obraz nebo hledat vzory v datech.</p></div>
+      <div class="feature"><div><div class="tag">Důležité vědět</div><h2>AI není člověk</h2><p>AI nemá vlastní prožitky, pocity ani osobní zkušenosti jako člověk. Neznamená to, že všemu rozumí. Zpracovává informace podle postupů, na kterých byla vytvořena a natrénována. Proto může vytvořit odpověď, která zní přesvědčivě, ale není pravdivá.</p></div><div class="feature-art" aria-hidden="true">💻 🧠</div></div>
+    </div></section>
+
+    <section><div class="wrap"><div class="section-head"><h2>Jak se AI učí?</h2><p>Představ si, že chceš naučit počítač poznávat kočky. Ukážeš mu velké množství obrázků a u každého je uvedeno, co na něm je. AI v nich postupně hledá opakující se znaky a vzory.</p></div><div class="steps">
+      <article class="step"><div class="num">1</div><h3>Dostane příklady</h3><p>Uvidí mnoho obrázků, textů nebo jiných dat. Čím vhodnější a kvalitnější příklady má, tím lépe se může učit.</p></article>
+      <article class="step"><div class="num">2</div><h3>Hledá souvislosti</h3><p>Pomocí matematických postupů se učí rozpoznávat vzory a vztahy, které se v příkladech opakují.</p></article>
+      <article class="step"><div class="num">3</div><h3>Zkouší nové případy</h3><p>Když dostane nový obrázek nebo otázku, využije naučené vzory a pokusí se nabídnout výsledek.</p></article>
+    </div><div class="notice"><strong>Příklad:</strong> AI se nemusí naučit, co je kočka, stejně jako malé dítě. Učí se rozpoznávat znaky, které se často objevují na obrázcích označených jako kočka.</div></div></section>
+
+    <section><div class="wrap"><div class="section-head"><h2>Jak vzniká odpověď AI?</h2><p>Generativní AI, se kterou si můžeš povídat nebo jí zadávat úkoly, vytváří nový obsah na základě zadání a vzorů, které se naučila.</p></div><div class="grid">
+      <article class="card"><div class="icon mint">💬</div><div class="tag">Tvůj pokyn</div><h3>Nejdřív položíš otázku</h3><p>Napíšeš, co potřebuješ – třeba „Vysvětli mi, proč prší, jako bych byl žákem 6. třídy“.</p></article>
+      <article class="card"><div class="icon lilac">🧩</div><div class="tag">Zpracování</div><h3>AI hledá vhodné pokračování</h3><p>Jazykový model postupně vybírá pravděpodobná slova a skládá z nich odpověď, která odpovídá zadání a naučeným vzorům.</p></article>
+      <article class="card"><div class="icon gold">📝</div><div class="tag">Výsledek</div><h3>Vznikne odpověď</h3><p>Dostaneš text, který může být užitečný, srozumitelný a dobře formulovaný. To ale samo o sobě nezaručuje, že je správný.</p></article>
+      <article class="card"><div class="icon rose">🔎</div><div class="tag">Tvoje role</div><h3>Ověříš důležité informace</h3><p>Zkontroluj fakta, porovnej je s důvěryhodnými zdroji a případně se zeptej učitele nebo jiného odborníka.</p></article>
+    </div></div></section>
+
+    <section><div class="wrap"><div class="section-head"><h2>Proč AI někdy chybuje?</h2><p>AI může být užitečná, ale není neomylná. Její odpovědi je potřeba posuzovat stejně pozorně jako informace z jiných zdrojů.</p></div><div class="gallery">
+      <article><div class="emoji">📚</div><h3>Nedostatek nebo zkreslení dat</h3><p>Pokud se AI učila z neúplných či zkreslených příkladů, může dělat chyby nebo některé věci posuzovat nespravedlivě.</p></article>
+      <article><div class="emoji">🎭</div><h3>Přesvědčivá nepřesnost</h3><p>Někdy vytvoří odpověď, která působí jistě, ale obsahuje vymyšlené údaje, události nebo zdroje. Tomu se říká halucinace AI.</p></article>
+      <article><div class="emoji">❓</div><h3>Nejasné zadání</h3><p>Když je pokyn příliš stručný nebo nejednoznačný, AI si může zadání vyložit jinak, než jsi zamýšlel.</p></article>
+    </div><div class="notice"><strong>Pravidlo detektiva:</strong> Čím důležitější informace je, tím pečlivěji ji ověřuj. Hezky napsaná odpověď ještě není důkazem pravdivosti.</div></div></section>
+
+    <section><div class="wrap"><div class="section-head"><h2>Vyzkoušej si, jak AI přemýšlí</h2><p>Malý experiment: porovnej, jak se může lišit výsledek podle toho, jak přesně zadáš úkol.</p></div><div class="grid">
+      <article class="card"><div class="icon mint">🟢</div><div class="tag">Jednoduché zadání</div><h3>„Vymysli příběh.“</h3><p>AI neví, pro koho příběh je, jak má být dlouhý ani o čem má být. Výsledek proto může být velmi obecný.</p></article>
+      <article class="card"><div class="icon gold">✨</div><div class="tag">Promyšlené zadání</div><h3>„Napiš krátký dobrodružný příběh pro žáka 6. třídy. Hlavní postavou je robot, který se bojí vody. Příběh zakonči překvapivě.“</h3><p>Konkrétnější pokyn dává AI více vodítek, podle kterých může vytvořit výsledek, který lépe odpovídá tvé představě.</p></article>
+    </div><div class="notice"><strong>Zkus to:</strong> Vymysli vlastní zadání. Postupně ho zpřesňuj a sleduj, jak se mění odpověď. Nepoužívej přitom osobní ani citlivé údaje.</div></div></section>
+
+    <section><div class="wrap"><div class="section-head"><h2>Co si zapamatovat?</h2><p>Nejdůležitější myšlenky, které se hodí při každém setkání s umělou inteligencí.</p></div><div class="steps">
+      <article class="step"><div class="num">1</div><h3>AI se učí z dat</h3><p>Rozpoznává vzory a souvislosti v příkladech, na kterých byla trénována.</p></article>
+      <article class="step"><div class="num">2</div><h3>AI může chybovat</h3><p>Její odpovědi nemusí být úplné, aktuální ani pravdivé.</p></article>
+      <article class="step"><div class="num">3</div><h3>Rozhoduje člověk</h3><p>Ty přemýšlíš, ověřuješ a odpovídáš za to, jak výsledek použiješ.</p></article>
+    </div></div></section>
+
+    <section style="padding-top:0"><div class="wrap"><div class="cta"><div><h2>Chceš objevovat dál?</h2><p>Vyzkoušej si další aktivity a zjisti, jak AI používat tvořivě, bezpečně a s rozumem.</p></div><a class="button" href="index.html">Zpět na hlavní stránku →</a></div></div></section>
+  </main>
+  <footer><div class="wrap">AI na Pastelce · Učíme se s umělou inteligencí přemýšlet, tvořit a ověřovat.</div></footer>
+</body>
+</html>
