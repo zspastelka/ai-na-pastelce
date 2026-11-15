@@ -20,6 +20,13 @@
     .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
     .gallery-grid figure { margin: 0; overflow: hidden; border-radius: var(--radius-md); background: #e2e8f0; }
     .gallery-grid img { display: block; width: 100%; height: 240px; object-fit: cover; }
+    .gallery-grid img { cursor: zoom-in; transition: transform .2s ease; }
+    .gallery-grid figure:hover img { transform: scale(1.025); }
+    .photo-lightbox { width: min(92vw, 1100px); max-width: none; max-height: 90vh; padding: 48px 16px 16px; border: 0; border-radius: 16px; background: #0f172a; color: #fff; overflow: visible; }
+    .photo-lightbox::backdrop { background: rgba(15, 23, 42, .88); }
+    .photo-lightbox img { display: block; max-width: 100%; max-height: calc(90vh - 64px); width: auto; height: auto; margin: 0 auto; object-fit: contain; }
+    .photo-lightbox-close { position: absolute; top: 8px; right: 8px; width: 34px; height: 34px; border: 0; border-radius: 50%; background: #fff; color: #172554; font-size: 24px; line-height: 1; cursor: pointer; }
+    .photo-lightbox-close:focus-visible { outline: 3px solid #facc15; outline-offset: 3px; }
     @media (max-width: 760px) { .gallery-main { padding: 34px 0 54px; } .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .gallery-grid img { height: 190px; } }
     @media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } .gallery-grid img { height: auto; max-height: 300px; } .gallery-heading { align-items: flex-start; } }
   </style>
@@ -69,5 +76,28 @@
       <a class="activity-footer-link" href="index.html">Zpět na úvodní stránku ↑</a>
     </div>
   </footer>
+
+  <dialog class="photo-lightbox" id="photo-lightbox" aria-label="Zvětšená fotografie">
+    <button class="photo-lightbox-close" type="button" aria-label="Zavřít fotografii">×</button>
+    <img id="photo-lightbox-image" src="" alt="">
+  </dialog>
+  <script>
+    const photoLightbox = document.getElementById('photo-lightbox');
+    const photoLightboxImage = document.getElementById('photo-lightbox-image');
+    const photoLightboxClose = photoLightbox.querySelector('.photo-lightbox-close');
+
+    document.querySelectorAll('.gallery-grid img').forEach((photo) => {
+      photo.addEventListener('click', () => {
+        photoLightboxImage.src = photo.src;
+        photoLightboxImage.alt = photo.alt;
+        photoLightbox.showModal();
+      });
+    });
+
+    photoLightboxClose.addEventListener('click', () => photoLightbox.close());
+    photoLightbox.addEventListener('click', (event) => {
+      if (event.target === photoLightbox) photoLightbox.close();
+    });
+  </script>
 </body>
 </html>
