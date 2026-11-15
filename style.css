@@ -352,3 +352,40 @@ img { max-width: 100%; height: auto; }
   .activity-grid { grid-template-columns: 1fr; }
   .activity-group-title { align-items: flex-start; }
 }
+
+
+/* Cílené doladění ikon a karet na stránce Hraj si s AI. */
+.activity-group > .activity-group-title {
+  display: grid !important;
+  grid-template-columns: 52px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+}
+.activity-group > .activity-group-title > .activity-group-icon {
+  display: grid !important;
+  width: 52px !important;
+  min-width: 52px;
+  height: 52px !important;
+  min-height: 52px;
+  padding: 0;
+  place-items: center;
+  border-radius: 16px;
+  line-height: 1;
+}
+.activity-group-title > div:last-child { min-width: 0; }
+.activity-card { min-height: 0; }
+
+@media (max-width: 700px) {
+  .activity-group > .activity-group-title {
+    grid-template-columns: 44px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+  }
+  .activity-group > .activity-group-title > .activity-group-icon {
+    width: 44px !important;
+    min-width: 44px;
+    height: 44px !important;
+    min-height: 44px;
+  }
+  .activity-card { padding: 20px; }
+}
