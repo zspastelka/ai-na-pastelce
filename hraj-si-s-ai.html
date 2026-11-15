@@ -1,31 +1,99 @@
 <!doctype html>
 <html lang="cs">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Hry a tvořivé aktivity s umělou inteligencí pro žáky.">
-<title>Hraj si s AI | AI na Pastelce</title>
-<style>
-:root{--navy:#172554;--blue:#1e3a8a;--teal:#0f766e;--yellow:#facc15;--ink:#172033;--muted:#64748b;--paper:#f8fafc;--line:#e2e8f0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);line-height:1.6}a{color:inherit}.wrap{width:min(1080px,calc(100% - 36px));margin:auto}
-header{background:var(--navy);color:white}.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:850;text-decoration:none;font-size:1.15rem;display:flex;gap:10px;align-items:center}.mark{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:var(--yellow);color:var(--navy)}.back{color:#dbeafe;text-decoration:none;font-weight:650}
-.hero{background:linear-gradient(130deg,#172554,#1e3a8a);color:white;padding:58px 0 64px}.eyebrow{color:#fde68a;font-size:.78rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase}.hero h1{font-size:clamp(2.4rem,6vw,4rem);line-height:1.05;letter-spacing:-.05em;margin:14px 0}.hero p{color:#dbeafe;max-width:700px;font-size:1.1rem;margin:0}
-main{padding:48px 0 70px}.intro{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:26px}.intro h2{color:var(--navy);font-size:1.9rem;letter-spacing:-.035em;margin:0}.intro p{max-width:530px;color:var(--muted);margin:0}
-.group{margin:42px 0}.group-title{display:flex;gap:13px;align-items:center;margin-bottom:17px}.group-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-size:1.5rem;background:#ccfbf1}.group-title h2{margin:0;color:var(--navy);font-size:1.5rem}.group-title p{margin:2px 0 0;color:var(--muted);font-size:.94rem}
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:white;border:1px solid var(--line);border-radius:21px;padding:24px;box-shadow:0 8px 24px rgba(15,23,42,.035);display:flex;flex-direction:column;min-height:255px}.tag{align-self:flex-start;border-radius:999px;padding:5px 10px;background:#eef2ff;color:#3730a3;font-size:.76rem;font-weight:800}.card h3{color:var(--navy);font-size:1.28rem;margin:13px 0 7px}.card p{color:var(--muted);margin:0 0 15px}.learn{background:#f8fafc;border-left:3px solid #2dd4bf;padding:11px 13px;border-radius:0 10px 10px 0;color:#334155;font-size:.92rem;margin:auto 0 17px}.action{display:inline-flex;align-items:center;align-self:flex-start;text-decoration:none;background:var(--yellow);color:var(--navy);font-weight:850;padding:10px 15px;border-radius:12px}.action:hover{filter:brightness(.96)}.reflection{background:#eef2ff;border:1px solid #dbeafe;border-radius:22px;padding:25px;margin-top:42px}.reflection h2{color:var(--navy);margin:0 0 8px}.reflection p{color:#475569;margin:0}.reflection ul{margin:12px 0 0;padding-left:22px;color:#334155}
-footer{background:var(--navy);color:#cbd5e1;padding:25px 0;font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(max-width:700px){.nav{padding:14px 0;align-items:flex-start;flex-direction:column}.intro{display:block}.intro p{margin-top:8px}.cards{grid-template-columns:1fr}.hero{padding:48px 0}}
-</style></head><body>
-<header><div class="wrap nav"><a class="brand" href="index.html"><span class="mark">✦</span>AI na Pastelce</a><span>Podpořeno z programu O2 Chytrá škola.</span> <a class="back" href="index.html">← Zpět na hlavní stránku</a></div></header>
-<section class="hero"><div class="wrap"><div class="eyebrow">🎮 Objevuj a zkoušej</div><h1>Hraj si s AI</h1><p>Vyzkoušej si, jak se umělá inteligence učí, jak dokáže pomáhat při tvoření a proč se někdy může splést. Nejlepší způsob, jak AI poznat, je zkoumat ji na vlastní kůži.</p></div></section>
-<main class="wrap"><div class="intro"><h2>Vyber si svou aktivitu</h2><p>Aktivity otevírají externí stránky. Po jejich vyzkoušení se vrať sem a zamysli se nad otázkami u jednotlivých úkolů.</p></div>
-<section class="group"><div class="group-title"><div class="group-icon">🧠</div><div><h2>1. Jak se AI učí?</h2><p>Vyzkoušej si strojové učení a rozpoznávání obrázků.</p></div></div><div class="cards">
-<article class="card"><span class="tag">Učení z příkladů</span><h3>AI pro oceány</h3><p>Nauč počítač rozlišovat ryby a další mořské živočichy od odpadků. Vyzkoušíš si, jak příklady, kterými AI trénujeme, ovlivňují její rozhodování.</p><div class="learn"><strong>Po aktivitě přemýšlej:</strong> Co se stane, když AI ukážeš málo příkladů nebo ji budeš učit chybně?</div><a class="action" href="https://code.org/oceans" target="_blank" rel="noopener noreferrer">Spustit AI pro oceány ↗</a></article>
-<article class="card"><span class="tag">Rozpoznávání obrázků</span><h3>Quick, Draw!</h3><p>Dostaneš zadání a v časovém limitu nakreslíš obrázek. Neuronová síť se bude snažit poznat, co kreslíš.</p><div class="learn"><strong>Po aktivitě přemýšlej:</strong> Podle čeho AI poznala, co kreslíš? Kdy se spletla a proč?</div><a class="action" href="https://quickdraw.withgoogle.com/" target="_blank" rel="noopener noreferrer">Zkusit Quick, Draw! ↗</a></article>
-</div></section>
-<section class="group"><div class="group-title"><div class="group-icon" style="background:#fef3c7">🎨</div><div><h2>2. Tvoříme s AI</h2><p>Podívej se, jak může umělá inteligence podpořit lidskou kreativitu.</p></div></div><div class="cards">
-<article class="card"><span class="tag">Kreslení s pomocníkem</span><h3>AutoDraw</h3><p>Začni vlastním náčrtkem. AutoDraw se pokusí rozpoznat, co kreslíš, a nabídne ti upravené obrázky, ze kterých si můžeš vybrat.</p><div class="learn"><strong>Po aktivitě přemýšlej:</strong> Pomohla ti AI vyjádřit tvůj nápad? Kdo rozhodoval o výsledném obrázku?</div><a class="action" href="https://www.autodraw.com/" target="_blank" rel="noopener noreferrer">Otevřít AutoDraw ↗</a></article>
-<article class="card"><span class="tag">Animace obrázků</span><h3>Animated Drawings</h3><p>Vyzkoušej, jak lze postavičku z kresby rozpohybovat. Vhodný obrázek může ožít jednoduchou animací.</p><div class="learn"><strong>Po aktivitě přemýšlej:</strong> Co zůstalo na tvém obrázku stejné a co se díky animaci změnilo?</div><a class="action" href="https://sketch.metademolab.com/" target="_blank" rel="noopener noreferrer">Vyzkoušet animaci ↗</a></article>
-</div></section>
-<div class="reflection"><h2>🔎 Malá výzva na závěr</h2><p>Vyber si jednu aktivitu a odpověz na tyto otázky:</p><ul><li>Co se podle tebe AI během aktivity naučila nebo co dokázala rozpoznat?</li><li>V čem byla úspěšná a kdy se mohla splést?</li><li>Jakou roli v celé aktivitě měl člověk?</li></ul></div></main>
-<footer><div class="wrap foot"><span><strong>AI na Pastelce</strong>▪️Vzdělávací projekt ZŠ a MŠ Mladá Boleslav, 17. listopadu 1325.</span><a href="index.html">Zpět na úvodní stránku ↑</a></div></footer>
-</body></html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hry a tvořivé aktivity s umělou inteligencí pro žáky.">
+  <meta name="theme-color" content="#172554">
+  <title>Hraj si s AI | AI na Pastelce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-container site-nav activity-nav">
+      <a class="site-brand" href="index.html"><span class="site-brand-mark">✦</span><span>AI na Pastelce</span></a>
+      <a class="activity-back" href="index.html">← Zpět na hlavní stránku</a>
+    </div>
+  </header>
+
+  <section class="site-hero activity-hero">
+    <div class="site-container">
+      <div class="site-eyebrow">🎮 Objevuj a zkoušej</div>
+      <h1>Hraj si s AI</h1>
+      <p>Vyzkoušej si, jak se umělá inteligence učí, jak dokáže pomáhat při tvoření a proč se někdy může splést. Nejlepší způsob, jak AI poznat, je zkoumat ji na vlastní kůži.</p>
+    </div>
+  </section>
+
+  <main class="site-container activity-main">
+    <div class="site-section-heading activity-intro">
+      <div>
+        <h2>Vyber si svou aktivitu</h2>
+        <p>Aktivity otevírají externí stránky. Po jejich vyzkoušení se vrať sem a zamysli se nad otázkami u jednotlivých úkolů.</p>
+      </div>
+    </div>
+
+    <section class="activity-group">
+      <div class="activity-group-title">
+        <div class="activity-group-icon mint">🧠</div>
+        <div><h2>1. Jak se AI učí?</h2><p>Vyzkoušej si strojové učení a rozpoznávání obrázků.</p></div>
+      </div>
+      <div class="activity-grid">
+        <article class="site-card activity-card">
+          <span class="activity-tag">Učení z příkladů</span>
+          <h3>AI pro oceány</h3>
+          <p>Nauč počítač rozlišovat ryby a další mořské živočichy od odpadků. Vyzkoušíš si, jak příklady, kterými AI trénujeme, ovlivňují její rozhodování.</p>
+          <div class="activity-reflection"><strong>Po aktivitě přemýšlej:</strong> Co se stane, když AI ukážeš málo příkladů nebo ji budeš učit chybně?</div>
+          <a class="site-button activity-button" href="https://code.org/oceans" target="_blank" rel="noopener noreferrer">Spustit AI pro oceány ↗</a>
+        </article>
+        <article class="site-card activity-card">
+          <span class="activity-tag">Rozpoznávání obrázků</span>
+          <h3>Quick, Draw!</h3>
+          <p>Dostaneš zadání a v časovém limitu nakreslíš obrázek. Neuronová síť se bude snažit poznat, co kreslíš.</p>
+          <div class="activity-reflection"><strong>Po aktivitě přemýšlej:</strong> Podle čeho AI poznala, co kreslíš? Kdy se spletla a proč?</div>
+          <a class="site-button activity-button" href="https://quickdraw.withgoogle.com/" target="_blank" rel="noopener noreferrer">Zkusit Quick, Draw! ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="activity-group">
+      <div class="activity-group-title">
+        <div class="activity-group-icon gold">🎨</div>
+        <div><h2>2. Tvoříme s AI</h2><p>Podívej se, jak může umělá inteligence podpořit lidskou kreativitu.</p></div>
+      </div>
+      <div class="activity-grid">
+        <article class="site-card activity-card">
+          <span class="activity-tag">Kreslení s pomocníkem</span>
+          <h3>AutoDraw</h3>
+          <p>Začni vlastním náčrtkem. AutoDraw se pokusí rozpoznat, co kreslíš, a nabídne ti upravené obrázky, ze kterých si můžeš vybrat.</p>
+          <div class="activity-reflection"><strong>Po aktivitě přemýšlej:</strong> Pomohla ti AI vyjádřit tvůj nápad? Kdo rozhodoval o výsledném obrázku?</div>
+          <a class="site-button activity-button" href="https://www.autodraw.com/" target="_blank" rel="noopener noreferrer">Otevřít AutoDraw ↗</a>
+        </article>
+        <article class="site-card activity-card">
+          <span class="activity-tag">Animace obrázků</span>
+          <h3>Animated Drawings</h3>
+          <p>Vyzkoušej, jak lze postavičku z kresby rozpohybovat. Vhodný obrázek může ožít jednoduchou animací.</p>
+          <div class="activity-reflection"><strong>Po aktivitě přemýšlej:</strong> Co zůstalo na tvém obrázku stejné a co se díky animaci změnilo?</div>
+          <a class="site-button activity-button" href="https://sketch.metademolab.com/" target="_blank" rel="noopener noreferrer">Vyzkoušet animaci ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="activity-challenge">
+      <h2>🔎 Malá výzva na závěr</h2>
+      <p>Vyber si jednu aktivitu a odpověz na tyto otázky:</p>
+      <ul>
+        <li>Co se podle tebe AI během aktivity naučila nebo co dokázala rozpoznat?</li>
+        <li>V čem byla úspěšná a kdy se mohla splést?</li>
+        <li>Jakou roli v celé aktivitě měl člověk?</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-container site-footer-inner">
+      <div><strong>AI na Pastelce</strong><br><span class="site-muted">Vzdělávací projekt ZŠ a MŠ Mladá Boleslav, 17. listopadu 1325.</span></div>
+      <a class="activity-footer-link" href="index.html">Zpět na úvodní stránku ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
