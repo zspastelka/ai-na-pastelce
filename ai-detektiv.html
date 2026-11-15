@@ -6,32 +6,30 @@
   <meta name="description" content="Staň se AI detektivem. Uč se ověřovat obrázky, videa a informace vytvořené umělou inteligencí.">
   <title>AI detektiv – AI na Pastelce</title>
   <style>
-    :root{--navy:#14243b;--navy2:#203651;--ink:#243449;--muted:#617187;--paper:#f5f7fb;--white:#fff;--mint:#d9f3ec;--teal:#168b83;--gold:#f4d77c;--rose:#f8dfe2;--line:#e2e8f0;--lilac:#e9e2fa}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
-    a{color:#087d78;font-weight:700}a:focus,button:focus{outline:3px solid #e5b83e;outline-offset:3px}
-    .hero{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:30px 20px 54px}
-    .wrap{max-width:1020px;margin:0 auto}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.brand{font-weight:800;letter-spacing:.03em;color:#fff;text-decoration:none}.back{color:#fff;text-decoration:none;border:1px solid #ffffff55;padding:8px 13px;border-radius:999px;font-size:.92rem}
-    .eyebrow{margin:44px 0 8px;color:#a8e5d7;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800}.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.08;margin:0 0 16px;max-width:760px}.hero p{font-size:1.1rem;max-width:720px;color:#e3eaf2;margin:0}
-    main{padding:34px 20px 70px}.intro{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;margin-top:-58px;box-shadow:0 12px 32px #14243b12}.intro strong{color:var(--navy)}
+    :root{--navy:#172554;--blue:#1e3a8a;--teal:#0f766e;--yellow:#facc15;--ink:#172033;--muted:#64748b;--paper:#f8fafc;--line:#e2e8f0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit}a:focus,button:focus{outline:3px solid #e5b83e;outline-offset:3px}
+    header{background:var(--navy);color:white}.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:850;text-decoration:none;font-size:1.15rem;display:flex;gap:10px;align-items:center}.mark{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:var(--yellow);color:var(--navy)}.back{color:#dbeafe;text-decoration:none;font-weight:650}
+    .hero{background:linear-gradient(130deg,#172554,#1e3a8a);color:#fff;padding:58px 0 64px}
+    .wrap{width:min(1080px,calc(100% - 36px));margin:0 auto}.eyebrow{margin:0 0 8px;color:#fde68a;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:850}.hero h1{font-size:clamp(2.4rem,6vw,4rem);line-height:1.05;letter-spacing:-.05em;margin:14px 0;max-width:760px}.hero p{font-size:1.1rem;max-width:700px;color:#dbeafe;margin:0}
+    main{padding:34px 0 70px}.intro{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;margin-top:-58px;box-shadow:0 12px 32px #14243b12}.intro strong{color:var(--navy)}
     .section{margin-top:42px}.section h2{font-size:1.7rem;color:var(--navy);margin:0 0 8px}.lead{color:var(--muted);margin:0 0 20px}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px}.icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;font-size:1.45rem;margin-bottom:12px}.mint{background:var(--mint)}.gold{background:#fff3cc}.lilac{background:var(--lilac)}.rose{background:var(--rose)}.card h3{margin:0 0 7px;color:var(--navy);font-size:1.12rem}.card p{margin:0;color:var(--muted)}
     .steps{counter-reset:step;display:grid;gap:12px}.step{display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:15px;padding:17px}.num{width:40px;height:40px;border-radius:50%;background:var(--mint);color:#126c65;font-weight:800;display:grid;place-items:center}.step h3{margin:0 0 4px;color:var(--navy);font-size:1.05rem}.step p{margin:0;color:var(--muted)}
     .callout{background:#fff8e3;border-left:5px solid #e5bd4f;border-radius:12px;padding:18px 20px;margin-top:18px}.callout strong{color:var(--navy)}
     .challenge{background:var(--navy);color:#fff;border-radius:20px;padding:24px}.challenge h2{color:#fff;margin-top:0}.challenge p{color:#e3eaf2}.challenge ul{padding-left:21px}.challenge li{margin:7px 0}
     .resource{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px}.resource p{margin:3px 0 0;color:var(--muted)}.pill{display:inline-block;background:var(--mint);color:#126c65;text-decoration:none;padding:10px 15px;border-radius:999px;white-space:nowrap}
-    footer{text-align:center;color:var(--muted);font-size:.9rem;padding:22px}
-    @media(max-width:560px){.hero{padding-bottom:70px}.intro{padding:19px}.step{grid-template-columns:38px 1fr;padding:14px}.num{width:36px;height:36px}}
+    footer{background:var(--navy);color:#cbd5e1;padding:25px 0;font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.foot a{color:#dbeafe;text-decoration:underline;font-weight:400}.foot a:hover{text-decoration:none}
+    @media(max-width:700px){.nav{padding:14px 0;align-items:flex-start;flex-direction:column}.hero{padding:48px 0}.intro{padding:19px}.step{grid-template-columns:38px 1fr;padding:14px}.num{width:36px;height:36px}.wrap{width:min(100% - 28px,1080px)}}
   </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap">
-      <div class="top"><a class="brand" href="index.html">AI NA PASTELCE</a><a class="back" href="index.html">← Zpět na hlavní stránku</a></div>
+  <header><div class="wrap nav"><a class="brand" href="index.html"><span class="mark">✦</span>AI na Pastelce</a><span>Podpořeno z programu O2 Chytrá škola.</span><a class="back" href="index.html">← Zpět na hlavní stránku</a></div></header>
+  <section class="hero"><div class="wrap">
       <div class="eyebrow">Mise č. 4 · Kritické myšlení</div>
       <h1>Staň se AI detektivem 🔎</h1>
       <p>Obrázek ani video nemusí ukazovat skutečnost. Nauč se hledat souvislosti, ověřovat zdroje a nepodlehnout prvnímu dojmu.</p>
-    </div>
-  </header>
+    </div></section>
   <main class="wrap">
     <div class="intro"><strong>Úkol detektiva:</strong> Nejde o to poznat každý obrázek na první pohled. Důležitější je umět se zastavit, položit správné otázky a ověřit si, odkud informace pochází.</div>
 
@@ -91,6 +89,6 @@
       </div>
     </section>
   </main>
-  <footer>AI na Pastelce · Učíme se přemýšlet, ověřovat a tvořit</footer>
+  <footer><div class="wrap foot"><span><strong>AI na Pastelce</strong>▪️Vzdělávací projekt ZŠ a MŠ Mladá Boleslav, 17. listopadu 1325.</span><a href="index.html">Zpět na úvodní stránku ↑</a></div></footer>
 </body>
 </html>
