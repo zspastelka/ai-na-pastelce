@@ -6,15 +6,19 @@
   <meta name="description" content="Hry a tipy, jak se bezpečně pohybovat na internetu a používat umělou inteligenci." />
   <title>Bezpečně na internetu | AI na Pastelce</title>
   <style>
-    :root{--navy:#17243b;--ink:#25334b;--muted:#637087;--mint:#dff5ed;--teal:#167c72;--gold:#ffe7a6;--lilac:#eee7ff;--paper:#f7f9fc;--white:#fff;--line:#e5eaf1}
-    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
-    a{color:var(--teal);font-weight:700;text-decoration:none} a:hover{text-decoration:underline}
-    .hero{background:var(--navy);color:#fff;padding:54px 20px 48px}
-    .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
-    .back{display:inline-block;color:#bfe9df;margin-bottom:22px;font-size:.95rem}
-    .eyebrow{color:#bfe9df;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:700}
-    h1{font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.12;margin:10px 0 16px}
-    .hero p{max-width:720px;color:#e2e8f1;font-size:1.1rem;margin:0}
+    :root{--navy:#172554;--blue:#1e3a8a;--ink:#25334b;--muted:#637087;--mint:#dff5ed;--teal:#167c72;--gold:#ffe7a6;--lilac:#eee7ff;--paper:#f7f9fc;--white:#fff;--line:#e5eaf1;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:var(--teal);font-weight:700;text-decoration:none}a:hover{text-decoration:underline}
+    header{background:var(--navy);color:white}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:850;text-decoration:none;font-size:1.15rem;display:flex;gap:10px;align-items:center;color:white}
+    .mark{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:#facc15;color:var(--navy)}
+    .back{color:#dbeafe;text-decoration:none;font-weight:650}
+    .hero{background:linear-gradient(130deg,#172554,#1e3a8a);color:#fff;padding:58px 0 64px}
+    .wrap{width:min(1080px,calc(100% - 36px));margin:0 auto;padding:0}
+    .eyebrow{margin:0 0 8px;color:#fde68a;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:850}
+    .hero h1{font-size:clamp(2.4rem,6vw,4rem);line-height:1.05;letter-spacing:-.05em;margin:14px 0;max-width:760px}
+    .hero p{max-width:700px;color:#dbeafe;font-size:1.1rem;margin:0}
     main{padding:38px 0 64px}.section-head{margin:0 0 22px}.section-head h2{font-size:1.7rem;margin:0 0 6px;color:var(--navy)}.section-head p{margin:0;color:var(--muted)}
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:18px;margin:22px 0 42px}
     .card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:23px;box-shadow:0 7px 22px rgba(23,36,59,.045)}
@@ -23,19 +27,20 @@
     .tips{background:#fff;border:1px solid var(--line);border-radius:18px;padding:25px;margin:20px 0 34px}
     .tips ul{padding-left:22px;margin:12px 0 0}.tips li{margin:8px 0}
     .callout{background:var(--mint);border-radius:16px;padding:20px 22px;margin:28px 0}.callout strong{color:var(--navy)}
-    footer{background:#eef2f7;padding:22px 0;color:var(--muted);font-size:.9rem}footer a{margin-right:14px}
-    @media(max-width:560px){.hero{padding:38px 0}.card{padding:20px}}
+    footer{background:var(--navy);color:#cbd5e1;padding:25px 0;font-size:.9rem}
+    .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .foot a{color:#dbeafe;text-decoration:underline;font-weight:400}
+    .foot a:hover{text-decoration:none}
+    @media(max-width:700px){.nav{padding:14px 0;align-items:flex-start;flex-direction:column}.hero{padding:48px 0}.wrap{width:min(100% - 28px,1080px)}.card{padding:20px}}
   </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap">
-      <a class="back" href="index.html">← Zpět na hlavní stránku</a>
-      <div class="eyebrow">AI na Pastelce · Bezpečný digitální svět</div>
-      <h1>Bezpečně na internetu</h1>
-      <p>Internet i umělá inteligence nám mohou hodně pomáhat. Důležité ale je vědět, co sdílet, čemu věřit a kdy se raději zastavit a ověřovat.</p>
-    </div>
-  </header>
+  <header><div class="wrap nav"><a class="brand" href="index.html"><span class="mark">✦</span>AI na Pastelce</a><span>Podpořeno z programu O2 Chytrá škola.</span><a class="back" href="index.html">← Zpět na hlavní stránku</a></div></header>
+  <section class="hero"><div class="wrap">
+    <div class="eyebrow">Bezpečný digitální svět</div>
+    <h1>Bezpečně na internetu</h1>
+    <p>Internet i umělá inteligence nám mohou hodně pomáhat. Důležité ale je vědět, co sdílet, čemu věřit a kdy se raději zastavit a ověřovat.</p>
+  </div></section>
   <main class="wrap">
     <section>
       <div class="section-head">
@@ -93,6 +98,6 @@
       </div>
     </section>
   </main>
-  <footer><div class="wrap"><a href="index.html">← Hlavní stránka AI na Pastelce</a><span>Vzdělávací materiál pro žáky ZŠ.</span></div></footer>
+  <footer><div class="wrap foot"><span><strong>AI na Pastelce</strong>▪️Vzdělávací projekt ZŠ a MŠ Mladá Boleslav, 17. listopadu 1325.</span><a href="index.html">Zpět na úvodní stránku ↑</a></div></footer>
 </body>
 </html>
