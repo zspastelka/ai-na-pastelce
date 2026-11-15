@@ -115,7 +115,8 @@
       const photos = studentTrack.querySelectorAll('figure');
       const maxIndex = Math.max(0, photos.length - 3);
       studentIndex = Math.min(studentIndex, maxIndex);
-      studentTrack.style.transform = `translateX(calc(-${studentIndex} * (100% / 3 + 16px / 3)) )`;
+      const step = photos.length ? photos[0].getBoundingClientRect().width + parseFloat(getComputedStyle(studentTrack).gap || 0) : 0;
+      studentTrack.style.transform = `translateX(-${studentIndex * step}px)`;
       studentPrev.disabled = studentIndex === 0;
       studentNext.disabled = studentIndex >= maxIndex;
       studentControls.hidden = photos.length <= 3;
@@ -125,6 +126,7 @@
     studentPrev.addEventListener('click', () => { studentIndex = Math.max(0, studentIndex - 1); updateStudentCarousel(); });
     studentNext.addEventListener('click', () => { studentIndex = Math.min(studentTrack.querySelectorAll('figure').length - 3, studentIndex + 1); updateStudentCarousel(); });
     updateStudentCarousel();
+    window.addEventListener('resize', updateStudentCarousel);
 
     document.querySelectorAll('.gallery-grid img, .student-carousel-track img').forEach((photo) => {
       photo.addEventListener('click', () => {
