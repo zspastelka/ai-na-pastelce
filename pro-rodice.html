@@ -7,7 +7,8 @@
   <title>Pro rodiče | AI na Pastelce</title>
   <style>
     :root {
-      --navy: #17243b;
+      --navy: #172554;
+      --blue: #1e3a8a;
       --mint: #dff4ec;
       --gold: #f8e8b8;
       --lilac: #eee8fa;
@@ -25,48 +26,58 @@
       margin: 0;
       color: var(--ink);
       background: var(--paper);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.65;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.6;
     }
     a { color: #315f83; }
     .topbar {
-      background: var(--white);
-      border-bottom: 1px solid var(--line);
+      background: var(--navy);
+      color: white;
     }
     .nav {
-      width: min(1100px, calc(100% - 40px));
+      width: min(1080px, calc(100% - 36px));
       margin: auto;
-      min-height: 68px;
+      min-height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
     }
     .brand {
-      color: var(--navy);
-      font-weight: 800;
+      color: white;
+      font-weight: 850;
       text-decoration: none;
-      letter-spacing: -.3px;
+      font-size: 1.15rem;
+      display: flex;
+      gap: 10px;
+      align-items: center;
     }
-    .nav a.back { text-decoration: none; font-weight: 700; }
-    .wrap { width: min(1000px, calc(100% - 40px)); margin: auto; }
+    .mark { display:grid; place-items:center; width:38px; height:38px; border-radius:13px; background:#facc15; color:var(--navy); }
+    .nav a.back { color:#dbeafe; text-decoration:none; font-weight:650; }
+    .wrap { width: min(1080px, calc(100% - 36px)); margin: auto; }
     .hero {
-      padding: 76px 0 64px;
-      background: linear-gradient(135deg, #e3f4ee 0%, #f1edfb 58%, #fff5df 100%);
+      padding: 58px 0 64px;
+      background: linear-gradient(130deg, #172554, #1e3a8a);
+      color: #fff;
     }
     .eyebrow {
       display: inline-block;
       margin: 0 0 14px;
       padding: 6px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,.75);
-      color: #48665f;
-      font-size: .86rem;
-      font-weight: 700;
+      background: transparent;
+      color: #fde68a;
+      font-size: .78rem;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      padding: 0;
+      border-radius: 0;
     }
     h1, h2, h3 { color: var(--navy); line-height: 1.2; }
-    h1 { max-width: 760px; margin: 0 0 18px; font-size: clamp(2.35rem, 6vw, 4rem); letter-spacing: -1.8px; }
-    .lead { max-width: 720px; margin: 0; font-size: 1.18rem; color: #46536a; }
+    h1 { max-width: 760px; margin: 14px 0; font-size: clamp(2.4rem, 6vw, 4rem); line-height:1.05; letter-spacing: -.05em; }
+    .hero h1 { color:#fff; }
+    .lead { max-width: 700px; margin: 0; font-size: 1.1rem; color: #dbeafe; }
     section { padding: 58px 0; }
     .section-head { max-width: 720px; margin-bottom: 28px; }
     .section-head h2 { margin: 0 0 10px; font-size: clamp(1.7rem, 4vw, 2.35rem); }
@@ -114,10 +125,15 @@
     .resource strong { display: block; color: var(--navy); margin-bottom: 4px; }
     .resource span { color: var(--muted); font-size: .95rem; }
     .resource:hover { border-color: #b7c9d8; transform: translateY(-1px); }
-    .footer { padding: 30px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
+    .footer { background:var(--navy); color:#cbd5e1; padding:25px 0; font-size:.9rem; }
+    .foot { display:flex; justify-content:space-between; gap:15px; flex-wrap:wrap; }
+    .foot a { color:#dbeafe; text-decoration:underline; font-weight:400; }
+    .foot a:hover { text-decoration:none; }
     @media (max-width: 680px) {
       .grid, .links { grid-template-columns: 1fr; }
-      .hero { padding: 56px 0 48px; }
+      .nav { padding:14px 0; align-items:flex-start; flex-direction:column; }
+      .hero { padding: 48px 0; }
+      .wrap { width:min(100% - 28px,1080px); }
       section { padding: 44px 0; }
       .card { padding: 22px; }
     }
@@ -126,7 +142,8 @@
 <body>
   <header class="topbar">
     <nav class="nav" aria-label="Hlavní navigace">
-      <a class="brand" href="index.html">AI na Pastelce</a>
+      <a class="brand" href="index.html"><span class="mark">✦</span>AI na Pastelce</a>
+      <span>Podpořeno z programu O2 Chytrá škola.</span>
       <a class="back" href="index.html">← Zpět na hlavní stránku</a>
     </nav>
   </header>
@@ -217,7 +234,7 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap">AI na Pastelce · Vzdělávací materiály pro žáky, rodiče a učitele</div>
+    <div class="wrap foot"><span><strong>AI na Pastelce</strong>▪️Vzdělávací projekt ZŠ a MŠ Mladá Boleslav, 17. listopadu 1325.</span><a href="index.html">Zpět na úvodní stránku ↑</a></div>
   </footer>
 </body>
 </html>
