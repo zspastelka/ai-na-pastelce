@@ -7,6 +7,15 @@
   <meta name="theme-color" content="#172554">
   <title>AI na Pastelce | Objevujeme svět umělé inteligence</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .welcome-section { padding: 30px 0 34px; background: #fff; border-bottom: 1px solid #e2e8f0; }
+    .welcome-inner { display: grid; grid-template-columns: minmax(220px, .72fr) minmax(0, 1.28fr); align-items: center; gap: 36px; }
+    .welcome-label { margin: 0 0 7px; color: #0f766e; font-size: .76rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .welcome-section h1 { margin: 0; color: #172554; font-size: clamp(1.65rem, 3vw, 2.15rem); line-height: 1.18; letter-spacing: -.035em; }
+    .welcome-copy p { margin: 0; color: #475569; font-size: 1rem; }
+    .welcome-copy p + p { margin-top: 9px; }
+    @media (max-width: 760px) { .welcome-inner { grid-template-columns: 1fr; gap: 12px; } }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -22,6 +31,20 @@
       </nav>
     </div>
   </header>
+
+  <section class="welcome-section" aria-labelledby="welcome-title">
+    <div class="site-container welcome-inner">
+      <div>
+        <p class="welcome-label">O projektu</p>
+        <h1 id="welcome-title">Vítej na AI na Pastelce</h1>
+      </div>
+      <div class="welcome-copy">
+        <p>AI na Pastelce je místo, kde společně objevujeme svět umělé inteligence. Web vznikl v roce 2026 díky podpoře programu O2 Chytrá škola s cílem přiblížit umělou inteligenci žákům, rodičům i učitelům.</p>
+        <p>Chceme ukázat, co všechno AI dokáže, jak ji můžeme tvořivě využívat, ale také jak se v digitálním světě bezpečně orientovat a přemýšlet nad informacemi, které k nám přicházejí.</p>
+        <p>Prohlížej si jednotlivé části, zkoušej připravené aktivity, objevuj práce našich žáků a vracej se pro nové nápady. Stránka bude postupně růst a přibývat na ní budou další školní projekty, zkušenosti a inspirace.</p>
+      </div>
+    </div>
+  </section>
 
   <main>
     <section class="site-hero">
