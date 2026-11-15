@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Praktické informace pro rodiče o umělé inteligenci, bezpečném používání technologií a podpoře dětí.">
+  <title>Pro rodiče | AI na Pastelce</title>
+  <style>
+    :root {
+      --navy: #17243b;
+      --mint: #dff4ec;
+      --gold: #f8e8b8;
+      --lilac: #eee8fa;
+      --rose: #f8e5e8;
+      --ink: #263247;
+      --muted: #657087;
+      --paper: #fbfcfe;
+      --white: #ffffff;
+      --line: #e6eaf0;
+      --shadow: 0 12px 32px rgba(23, 36, 59, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: #315f83; }
+    .topbar {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      width: min(1100px, calc(100% - 40px));
+      margin: auto;
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      color: var(--navy);
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: -.3px;
+    }
+    .nav a.back { text-decoration: none; font-weight: 700; }
+    .wrap { width: min(1000px, calc(100% - 40px)); margin: auto; }
+    .hero {
+      padding: 76px 0 64px;
+      background: linear-gradient(135deg, #e3f4ee 0%, #f1edfb 58%, #fff5df 100%);
+    }
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.75);
+      color: #48665f;
+      font-size: .86rem;
+      font-weight: 700;
+    }
+    h1, h2, h3 { color: var(--navy); line-height: 1.2; }
+    h1 { max-width: 760px; margin: 0 0 18px; font-size: clamp(2.35rem, 6vw, 4rem); letter-spacing: -1.8px; }
+    .lead { max-width: 720px; margin: 0; font-size: 1.18rem; color: #46536a; }
+    section { padding: 58px 0; }
+    .section-head { max-width: 720px; margin-bottom: 28px; }
+    .section-head h2 { margin: 0 0 10px; font-size: clamp(1.7rem, 4vw, 2.35rem); }
+    .section-head p { margin: 0; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .card {
+      padding: 26px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    .icon {
+      width: 48px; height: 48px; display: grid; place-items: center;
+      margin-bottom: 16px; border-radius: 15px; font-size: 1.45rem;
+    }
+    .mint { background: var(--mint); }
+    .gold { background: var(--gold); }
+    .lilac { background: var(--lilac); }
+    .rose { background: var(--rose); }
+    .card h3 { margin: 0 0 10px; font-size: 1.2rem; }
+    .card p { margin: 0; color: var(--muted); }
+    .note {
+      margin-top: 24px; padding: 22px 24px; border-radius: 18px;
+      background: #f1edfb; border: 1px solid #e7def7;
+    }
+    .note strong { color: var(--navy); }
+    .steps { display: grid; gap: 14px; }
+    .step {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 18px 20px; background: var(--white);
+      border: 1px solid var(--line); border-radius: 16px;
+    }
+    .number {
+      flex: 0 0 34px; height: 34px; display: grid; place-items: center;
+      border-radius: 50%; background: var(--gold); color: var(--navy); font-weight: 800;
+    }
+    .step p { margin: 3px 0 0; color: var(--muted); }
+    .links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .resource {
+      display: block; padding: 18px 20px; background: var(--white);
+      border: 1px solid var(--line); border-radius: 16px;
+      text-decoration: none; box-shadow: 0 6px 18px rgba(23,36,59,.04);
+    }
+    .resource strong { display: block; color: var(--navy); margin-bottom: 4px; }
+    .resource span { color: var(--muted); font-size: .95rem; }
+    .resource:hover { border-color: #b7c9d8; transform: translateY(-1px); }
+    .footer { padding: 30px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
+    @media (max-width: 680px) {
+      .grid, .links { grid-template-columns: 1fr; }
+      .hero { padding: 56px 0 48px; }
+      section { padding: 44px 0; }
+      .card { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a class="brand" href="index.html">AI na Pastelce</a>
+      <a class="back" href="index.html">← Zpět na hlavní stránku</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Průvodce pro rodiče</p>
+        <h1>Umělá inteligence a děti: pojďme se v ní společně vyznat</h1>
+        <p class="lead">Umělá inteligence už je součástí světa, ve kterém děti vyrůstají. Nemusíte znát všechny nástroje ani technické podrobnosti. Důležité je zajímat se, mluvit s dětmi a pomáhat jim používat technologie bezpečně a s rozumem.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Co je dobré vědět</h2>
+          <p>Několik základních myšlenek, které vám pomohou otevřít doma rozhovor o AI.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="icon mint">🤖</div>
+            <h3>AI se může mýlit</h3>
+            <p>Umělá inteligence dokáže vytvářet přesvědčivé odpovědi, obrázky i videa. To ale neznamená, že jsou vždy pravdivé. Důležité informace je potřeba ověřovat.</p>
+          </article>
+          <article class="card">
+            <div class="icon gold">🔒</div>
+            <h3>Osobní údaje patří do soukromí</h3>
+            <p>Děti by neměly do AI nástrojů zadávat adresu, telefon, hesla, fotografie ani jiné citlivé informace o sobě či druhých.</p>
+          </article>
+          <article class="card">
+            <div class="icon lilac">🧠</div>
+            <h3>AI má pomáhat, ne přemýšlet za nás</h3>
+            <p>Může vysvětlit učivo, nabídnout nápady nebo pomoci s procvičováním. Dítě by ale mělo rozumět tomu, co odevzdává, a umět vlastními slovy popsat postup.</p>
+          </article>
+          <article class="card">
+            <div class="icon rose">🗣️</div>
+            <h3>Mluvte spolu</h3>
+            <p>Zajímejte se, které nástroje dítě používá, co mu na nich připadá užitečné a kdy si není jisté. Otevřený rozhovor je lepší než zákaz bez vysvětlení.</p>
+          </article>
+        </div>
+        <div class="note">
+          <strong>Jednoduché pravidlo:</strong> Když si dítě není jisté, zda je něco vytvořené AI pravdivé, bezpečné nebo vhodné ke sdílení, mělo by se poradit s dospělým.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Jak o AI mluvit s dětmi</h2>
+          <p>Není potřeba vést dlouhou přednášku. Pomohou i krátké otázky při běžném rozhovoru.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><span class="number">1</span><div><strong>Kde ses s AI setkal/a?</strong><p>Nechte dítě popsat konkrétní aplikaci, hru, obrázek nebo situaci.</p></div></div>
+          <div class="step"><span class="number">2</span><div><strong>Jak poznáme, že je odpověď správná?</strong><p>Zkuste společně najít další důvěryhodný zdroj a informaci porovnat.</p></div></div>
+          <div class="step"><span class="number">3</span><div><strong>Co bychom do takového nástroje neměli zadávat?</strong><p>Proberte osobní údaje, fotografie, hesla a soukromé informace.</p></div></div>
+          <div class="step"><span class="number">4</span><div><strong>Kdy je lepší obrátit se na člověka?</strong><p>U citlivých, osobních nebo důležitých rozhodnutí má AI zůstat jen pomocníkem.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Užitečné zdroje pro rodiče</h2>
+          <p>Ověřené weby, kde můžete získat další informace o bezpečnosti a digitálním světě dětí.</p>
+        </div>
+        <div class="links">
+          <a class="resource" href="https://www.e-bezpeci.cz/" target="_blank" rel="noopener noreferrer">
+            <strong>E-Bezpečí ↗</strong><span>Rizika online prostředí, prevence a bezpečné chování na internetu.</span>
+          </a>
+          <a class="resource" href="https://www.bezpecne-online.cz/" target="_blank" rel="noopener noreferrer">
+            <strong>Bezpečně online ↗</strong><span>Praktické rady pro bezpečnější pohyb dětí v digitálním světě.</span>
+          </a>
+          <a class="resource" href="https://www.dzs.cz/" target="_blank" rel="noopener noreferrer">
+            <strong>Dům zahraniční spolupráce ↗</strong><span>Informace a vzdělávací materiály k digitálnímu vzdělávání.</span>
+          </a>
+          <a class="resource" href="https://www.csirt.cz/" target="_blank" rel="noopener noreferrer">
+            <strong>CSIRT.CZ ↗</strong><span>Upozornění a doporučení k bezpečnosti na internetu.</span>
+          </a>
+        </div>
+        <div class="note">
+          <strong>Nezapomeňte:</strong> Pravidla používání jednotlivých AI nástrojů, včetně věkových omezení, se mohou lišit. Před registrací dítěte si vždy ověřte aktuální podmínky konkrétní služby.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">AI na Pastelce · Vzdělávací materiály pro žáky, rodiče a učitele</div>
+  </footer>
+</body>
+</html>
