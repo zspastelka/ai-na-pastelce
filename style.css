@@ -318,3 +318,37 @@ img { max-width: 100%; height: auto; }
   .site-hero .hero-grid { grid-template-columns: 1fr; }
   .site-hero .hero-art { min-height: 250px; margin-top: 8px; }
 }
+
+
+/* Podstránka: Hraj si s AI */
+.activity-nav { min-height: 76px; }
+.activity-back, .activity-footer-link { color: #dbeafe; text-decoration: none; font-weight: 700; }
+.activity-back:hover, .activity-footer-link:hover { color: var(--yellow); }
+.activity-hero { padding-block: 58px 64px; }
+.activity-hero h1 { margin-bottom: 14px; }
+.activity-main { padding-block: 48px 70px; }
+.activity-intro { margin-bottom: 28px; }
+.activity-intro > div { max-width: 760px; }
+.activity-intro h2 { font-size: clamp(1.8rem, 4vw, 2.3rem); }
+.activity-group { margin: 38px 0; }
+.activity-group-title { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.activity-group-icon { flex: 0 0 52px; width: 52px; height: 52px; display: grid; place-items: center; border-radius: 16px; font-size: 1.6rem; }
+.activity-group-title h2 { margin: 0; color: var(--navy); font-size: 1.55rem; letter-spacing: -.03em; }
+.activity-group-title p { margin: 3px 0 0; color: var(--muted); }
+.activity-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.activity-card { display: flex; flex-direction: column; min-height: 300px; }
+.activity-card h3 { margin: 13px 0 8px; font-size: 1.3rem; }
+.activity-card p { margin-bottom: 16px; }
+.activity-tag { align-self: flex-start; border-radius: 999px; padding: 5px 11px; background: #eef2ff; color: #3730a3; font-size: .76rem; font-weight: 800; }
+.activity-reflection { margin: auto 0 18px; padding: 12px 14px; border-left: 3px solid #2dd4bf; border-radius: 0 11px 11px 0; background: #f8fafc; color: #334155; font-size: .93rem; }
+.activity-button { align-self: flex-start; }
+.activity-challenge { margin-top: 42px; padding: 26px; border: 1px solid #dbeafe; border-radius: var(--radius-lg); background: #eef2ff; }
+.activity-challenge h2 { margin: 0 0 8px; color: var(--navy); }
+.activity-challenge p { margin: 0; color: #475569; }
+.activity-challenge ul { margin: 12px 0 0; padding-left: 22px; color: #334155; }
+@media (max-width: 700px) {
+  .activity-back { padding-bottom: 4px; }
+  .activity-main { padding-block: 38px 54px; }
+  .activity-grid { grid-template-columns: 1fr; }
+  .activity-group-title { align-items: flex-start; }
+}
