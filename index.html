@@ -15,6 +15,17 @@
     .welcome-copy p { margin: 0; color: #475569; font-size: 1rem; }
     .welcome-copy p + p { margin-top: 9px; }
     @media (max-width: 760px) { .welcome-inner { grid-template-columns: 1fr; gap: 12px; } }
+    .project-feature { padding: 42px 0; background: linear-gradient(120deg, #172554 0%, #1e3a8a 58%, #1d4ed8 100%); color: #fff; }
+    .project-feature-inner { position: relative; overflow: hidden; padding: 30px 34px; border: 1px solid rgba(255,255,255,.2); border-radius: 20px; background: rgba(255,255,255,.07); }
+    .project-feature-inner::after { content: "✦"; position: absolute; right: 30px; top: 8px; color: rgba(250,204,21,.18); font-size: 112px; line-height: 1; pointer-events: none; }
+    .project-feature-label { display: inline-block; margin: 0 0 12px; padding: 6px 11px; border-radius: 999px; background: #facc15; color: #172554; font-size: .76rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .project-feature h2 { position: relative; z-index: 1; max-width: 720px; margin: 0 0 13px; color: #fff; font-size: clamp(1.65rem, 3vw, 2.15rem); line-height: 1.18; letter-spacing: -.035em; }
+    .project-feature-copy { position: relative; z-index: 1; max-width: 820px; }
+    .project-feature-copy p { margin: 0; color: #e2e8f0; font-size: 1rem; }
+    .project-feature-copy p + p { margin-top: 10px; }
+    .project-feature-note { padding-top: 13px; border-top: 1px solid rgba(255,255,255,.2); }
+    .project-feature a { color: #fde68a; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+    @media (max-width: 760px) { .project-feature { padding: 28px 0; } .project-feature-inner { padding: 24px 20px; } .project-feature-inner::after { right: 12px; top: 12px; font-size: 76px; } }
     .site-nav { justify-content: flex-start; }
     .site-links { margin-left: auto; }
     .site-search { position: relative; flex: 0 0 auto; }
@@ -97,6 +108,20 @@
           <p>AI na Pastelce je místo, kde společně objevujeme svět umělé inteligence. Web vznikl v roce 2026 díky podpoře programu O2 Chytrá škola s cílem přiblížit umělou inteligenci žákům, rodičům i učitelům.</p>
           <p>Chceme ukázat, co všechno AI dokáže, jak ji můžeme tvořivě využívat, ale také jak se v digitálním světě bezpečně orientovat a přemýšlet nad informacemi, které k nám přicházejí.</p>
           <p>Prohlížej si jednotlivé části, zkoušej připravené aktivity, objevuj práce našich žáků a vracej se pro nové nápady. Stránka bude postupně růst a přibývat na ní budou další školní projekty, zkušenosti a inspirace.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-feature" aria-labelledby="project-feature-title">
+      <div class="site-container">
+        <div class="project-feature-inner">
+          <p class="project-feature-label">✦ Hlavní výstup projektu</p>
+          <h2 id="project-feature-title">Z projektu vznikl web, který žije dál.</h2>
+          <div class="project-feature-copy">
+            <p>Díky projektu O2 Chytrá škola jsme vytvořili vzdělávací web AI na Pastelce. Na jednom místě propojuje aktivity pro žáky, inspiraci pro učitele, informace pro rodiče i ukázky toho, co jsme společně vytvořili.</p>
+            <p>Web nekončí posledním workshopem. Bude se dál rozvíjet, doplňovat a sloužit všem, kteří chtějí lépe porozumět světu umělé inteligence. Od prvních nápadů až po vlastní vzdělávací web.</p>
+            <p class="project-feature-note">Původní projektová nástěnka <a href="https://padlet.com/janasovova/ai-na-pastelce-qwyae4meaxt2o50g?lang=cs" target="_blank" rel="noopener noreferrer">Padlet</a> zůstává jako archiv průběhu a aktivit projektu.</p>
+          </div>
         </div>
       </div>
     </section>
