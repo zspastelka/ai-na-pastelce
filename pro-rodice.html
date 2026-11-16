@@ -125,30 +125,21 @@
     .resource strong { display: block; color: var(--navy); margin-bottom: 4px; }
     .resource span { color: var(--muted); font-size: .95rem; }
     .resource:hover { border-color: #b7c9d8; transform: translateY(-1px); }
-    .results-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-bottom:28px; }
-    .result-stat { padding:22px; background:var(--white); border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow); }
-    .result-stat strong { display:block; color:var(--blue); font-size:2.25rem; line-height:1.1; letter-spacing:-.04em; margin-bottom:9px; }
-    .result-stat span { display:block; color:var(--muted); font-size:.95rem; }
-    .result-panel { padding:26px; background:var(--white); border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow); }
-    .result-panel h3 { margin:0 0 8px; font-size:1.25rem; }
-    .result-panel > p { margin:0 0 22px; color:var(--muted); }
-    .bar-list { display:grid; gap:16px; }
-    .bar-row { display:grid; grid-template-columns:minmax(150px, 1fr) minmax(120px, 1.6fr) 42px; gap:12px; align-items:center; }
-    .bar-label { color:var(--ink); font-size:.95rem; }
-    .bar-track { height:11px; background:#edf1f6; border-radius:99px; overflow:hidden; }
-    .bar-fill { height:100%; background:linear-gradient(90deg,#315f9b,#6e9bc2); border-radius:99px; }
-    .bar-value { color:var(--navy); font-weight:800; text-align:right; font-variant-numeric:tabular-nums; }
-    .results-note { margin-top:18px; color:var(--muted); font-size:.9rem; }
+    .insight-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+    .insight-card { padding:25px; background:var(--white); border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow); }
+    .insight-icon { width:46px; height:46px; display:grid; place-items:center; border-radius:15px; margin-bottom:17px; font-size:1.35rem; }
+    .insight-card h3 { margin:0 0 10px; font-size:1.2rem; }
+    .insight-card p { margin:0; color:var(--muted); }
+    .insight-highlight { margin-top:20px; padding:24px 26px; border-radius:18px; background:linear-gradient(120deg,#eef4fb,#f1edfb); border:1px solid #dfe8f2; }
+    .insight-highlight strong { color:var(--navy); }
+    .insight-highlight p { margin:7px 0 0; color:var(--muted); }
+    .insight-foot { margin:15px 0 0; color:var(--muted); font-size:.9rem; }
     .footer { background:var(--navy); color:#cbd5e1; padding:25px 0; font-size:.9rem; }
     .foot { display:flex; justify-content:space-between; gap:15px; flex-wrap:wrap; }
     .foot a { color:#dbeafe; text-decoration:underline; font-weight:400; }
     .foot a:hover { text-decoration:none; }
     @media (max-width: 680px) {
-      .grid, .links, .results-grid { grid-template-columns: 1fr; }
-      .bar-row { grid-template-columns:1fr 42px; gap:7px 10px; }
-      .bar-label { grid-column:1 / -1; }
-      .bar-track { grid-column:1; }
-      .bar-value { grid-column:2; grid-row:2; }
+      .grid, .links, .insight-grid { grid-template-columns: 1fr; }
       .nav { padding:14px 0; align-items:flex-start; flex-direction:column; }
       .hero { padding: 48px 0; }
       .wrap { width:min(100% - 28px,1080px); }
@@ -269,35 +260,31 @@
     <section id="vysledky-dotazniku">
       <div class="wrap">
         <div class="section-head">
-          <h2>Co nám ukázaly odpovědi rodičů?</h2>
-          <p>V rámci projektu AI na Pastelce jsme se zaměřili také na vzdělávání rodičů. Prostřednictvím interaktivního dotazníku jsme otevřeli témata umělé inteligence, deepfakes, ochrany soukromí a bezpečnosti dětí na internetu. Výsledky nám přiblížily, která témata rodiče nejvíce oslovila a jak vnímají svou připravenost provázet děti digitálním světem.</p>
+          <h2>Co nám dotazník skutečně ukázal?</h2>
+          <p>Odpovědi rodičů ukázaly, že v digitálním světě se už dobře orientují v řadě běžných hrozeb. Zároveň ale upozornily na situace, ve kterých může být hranice mezi bezpečím a rizikem méně zřetelná. Právě ty stojí za pozornost.</p>
         </div>
-        <div class="results-grid">
-          <article class="result-stat">
-            <strong>86 %</strong>
-            <span>rodičů se cítí lépe připraveno mluvit s dětmi o bezpečnosti na internetu.</span>
+        <div class="insight-grid">
+          <article class="insight-card">
+            <div class="insight-icon mint">🛡️</div>
+            <h3>Co už rodiče zvládají</h3>
+            <p>V modelových situacích rodiče velmi dobře rozpoznávali zjevné podvody – například falešné přihlašovací odkazy, žádosti o ověřovací kódy nebo podezřelá videa. Vědí, že naléhavá zpráva ani známá tvář na obrazovce ještě nejsou zárukou pravosti.</p>
           </article>
-          <article class="result-stat">
-            <strong>80 %</strong>
-            <span>rodičů správně rozpoznalo, které zadání do veřejné AI nejvíce ohrožuje soukromí dítěte.</span>
+          <article class="insight-card">
+            <div class="insight-icon gold">🔍</div>
+            <h3>Kde je potřeba zbystřit</h3>
+            <p>Složitější mohou být situace, které na první pohled vypadají nevinně. Fotografie dítěte může prozradit školu či místo, hlasová zpráva může napodobit blízkého člověka a příliš osobní zadání může odhalit citlivé informace veřejnému AI nástroji.</p>
           </article>
-          <article class="result-stat">
-            <strong>46 %</strong>
-            <span>rodičů uvedlo, že se díky dotazníku dozvědělo něco nového.</span>
+          <article class="insight-card">
+            <div class="insight-icon lilac">💬</div>
+            <h3>Nejdůležitější je mluvit spolu</h3>
+            <p>Nejužitečnější částí dotazníku byla pro rodiče nejčastěji komunikace s dětmi. Téměř polovina rodičů navíc uvedla, že se dozvěděla něco nového. Potvrzuje se, že bezpečí dětí nestojí jen na znalosti technologií, ale také na otevřeném rozhovoru a důvěře.</p>
           </article>
         </div>
-        <div class="result-panel">
-          <h3>Co bylo pro rodiče nejužitečnější?</h3>
-          <p>Nejčastěji rodiče vyzdvihovali téma komunikace s dětmi. Ukazuje se tak, že vedle technických znalostí je důležité také umět s dětmi o digitálním světě otevřeně mluvit.</p>
-          <div class="bar-list" role="img" aria-label="Podíl jednotlivých témat označených jako nejužitečnější">
-            <div class="bar-row"><span class="bar-label">Komunikace s dětmi</span><div class="bar-track"><div class="bar-fill" style="width:43%"></div></div><span class="bar-value">43 %</span></div>
-            <div class="bar-row"><span class="bar-label">Umělá inteligence</span><div class="bar-track"><div class="bar-fill" style="width:19%"></div></div><span class="bar-value">19 %</span></div>
-            <div class="bar-row"><span class="bar-label">Soukromí a fotografie</span><div class="bar-track"><div class="bar-fill" style="width:16%"></div></div><span class="bar-value">16 %</span></div>
-            <div class="bar-row"><span class="bar-label">Deepfakes a falešný obsah</span><div class="bar-track"><div class="bar-fill" style="width:11%"></div></div><span class="bar-value">11 %</span></div>
-            <div class="bar-row"><span class="bar-label">Podvodné zprávy</span><div class="bar-track"><div class="bar-fill" style="width:11%"></div></div><span class="bar-value">11 %</span></div>
-          </div>
-          <p class="results-note">Výsledky vycházejí z anonymizovaného vyhodnocení odpovědí v dotazníku. Uvedené hodnoty jsou zaokrouhlené.</p>
+        <div class="insight-highlight">
+          <strong>Co si z toho odnést do rodiny?</strong>
+          <p>Než něco zveřejníme, přepošleme nebo zadáme do AI, zastavme se a zamysleme se, jaké informace tím o sobě či druhých odhalujeme. A když si nejsme jistí, ověřme si situaci jiným způsobem a proberme ji s dítětem.</p>
         </div>
+        <p class="insight-foot">Shrnutí vychází z anonymizovaných odpovědí rodičů v projektovém dotazníku.</p>
       </div>
     </section>
 
