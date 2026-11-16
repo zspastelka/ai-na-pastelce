@@ -10,19 +10,19 @@
 body{font-family:Arial,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#172033;line-height:1.55}
 .page{max-width:1200px;margin:0 auto}
 .header{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:18px}
-.header-left img{height:60px;width:auto;max-width:190px;object-fit:contain}
+.header-left img,.header-right img{height:60px;width:auto;max-width:190px;object-fit:contain}
 .support-text{font-size:11px;color:#475569}
 .header-center{text-align:center;flex:1;min-width:260px}
 .header-center h1{margin:0;color:#172554;font-size:clamp(1.6rem,3vw,2.2rem)}
 .header-center h2{margin:6px 0 0;font-size:17px;font-weight:400;color:#555}
-.header-right{text-align:right;color:#172554;font-weight:700;line-height:1.25}
-.header-right span{display:block;color:#64748b;font-size:12px;font-weight:400;margin-top:5px}
+.header-right{display:flex;justify-content:flex-end;align-items:center;flex:0 0 190px}
+.header-right img{max-height:66px}
 #method{background:#eef3ff;border-left:6px solid #4a90e2;padding:16px 18px;margin:18px 0 26px;border-radius:0 8px 8px 0}
 #method p{margin:7px 0 0}
 .section-title{margin:28px 0 15px;color:#172554;font-size:1.45rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.case{background:#fff;padding:12px;border-radius:10px;text-align:center;box-shadow:0 2px 9px rgba(15,23,42,.06)}
-.case img{display:block;width:100%;height:260px;object-fit:contain;background:#eee;border-radius:8px;cursor:zoom-in}
+.case{background:#fff;padding:10px;border-radius:10px;text-align:center}
+.case img{display:block;width:100%;height:220px;object-fit:contain;background:#eee;border-radius:8px;cursor:zoom-in}
 .case h3{margin:10px 0 2px;color:#172554;font-size:1rem}
 .case p{margin:0;color:#64748b;font-size:.88rem}
 #summary{background:#fff;border-radius:10px;padding:20px 22px;margin:28px 0}
@@ -37,7 +37,7 @@ body{font-family:Arial,sans-serif;background:#f4f6f8;margin:0;padding:20px;color
 .viewer-caption{position:absolute;bottom:12px;left:15px;right:15px;text-align:center;color:white;font-weight:700}
 .footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #d8dee8;padding:18px 0 5px;margin-top:25px;color:#64748b;font-size:13px}
 .footer a{color:#1d4ed8}
-@media(max-width:650px){body{padding:14px}.header{justify-content:center}.header-left,.header-right{flex:1 1 40%}.header-center{order:3;flex-basis:100%}.header-right{text-align:right}.case img{height:230px}}
+@media(max-width:650px){body{padding:14px}.header{justify-content:center}.header-left,.header-right{flex:1 1 40%}.header-center{order:3;flex-basis:100%}.header-right{justify-content:flex-end}.case img{height:220px}}
 </style>
 </head>
 <body>
@@ -51,7 +51,7 @@ body{font-family:Arial,sans-serif;background:#f4f6f8;margin:0;padding:20px;color
       <h1>AI očima osmáků</h1>
       <h2>Jak žáci 8. tříd přemýšlejí o umělé inteligenci</h2>
     </div>
-    <div class="header-right">ZŠ a MŠ<br>Mladá Boleslav<span>17. listopadu 1325</span></div>
+    <div class="header-right"><img src="https://raw.githubusercontent.com/zspastelka/Od-kresby-k-AI-realit-/main/logo-zs-pastelka.png" alt="Logo ZŠ a MŠ Mladá Boleslav"></div>
   </div>
 
   <div id="method">
