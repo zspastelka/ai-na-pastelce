@@ -47,6 +47,17 @@
     .o2-logo-placeholder { display: flex; align-items: center; justify-content: center; min-width: 190px; min-height: 62px; margin-top: 12px; padding: 10px 16px; border-radius: 10px; }
     .o2-logo-placeholder img { display: block; width: auto; max-width: 210px; max-height: 72px; object-fit: contain; }
     @media (max-width: 760px) { .site-search { align-self: flex-start; } .site-search-panel { left: 0; right: auto; } }
+
+    .student-work-section { padding: 42px 0 46px; background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
+    .student-work-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 24px; }
+    .student-work-card { overflow: hidden; border: 1px solid #e2e8f0; border-radius: 16px; background: #fff; box-shadow: 0 5px 18px rgba(15,23,42,.05); }
+    .student-work-card img { display: block; width: 100%; height: 190px; object-fit: cover; }
+    .student-work-card-copy { padding: 17px 17px 19px; }
+    .student-work-card h3 { margin: 0 0 7px; color: #172554; font-size: 1.08rem; }
+    .student-work-card p { margin: 0; color: #475569; font-size: .94rem; }
+    .student-work-more { margin: 23px 0 0; text-align: center; }
+    @media (max-width: 900px) { .student-work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 520px) { .student-work-grid { grid-template-columns: 1fr; } .student-work-card img { height: 220px; } }
   </style>
 </head>
 <body>
@@ -123,6 +134,46 @@
             <p class="project-feature-note">Původní projektová nástěnka <a href="https://padlet.com/janasovova/ai-na-pastelce-qwyae4meaxt2o50g?lang=cs" target="_blank" rel="noopener noreferrer">Padlet</a> zůstává jako archiv průběhu a aktivit projektu.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="student-work-section" id="vystupy-zaku" aria-labelledby="student-work-title">
+      <div class="site-container">
+        <div class="site-section-heading">
+          <h2 id="student-work-title">Co dokázali naši žáci?</h2>
+          <p>Od prvních pokusů s umělou inteligencí až po vlastní plakáty, návrhy a animace. Podívejte se na konkrétní ukázky toho, co žáci během projektu vytvořili.</p>
+        </div>
+        <div class="student-work-grid">
+          <article class="student-work-card">
+            <img src="images/galerie/zaci/fotoalbum-11/20260604_104607000_iOS%201.jpg" alt="Ukázka plakátu vytvořeného žáky pomocí umělé inteligence" loading="lazy">
+            <div class="student-work-card-copy">
+              <h3>Plakáty s vlastním sdělením</h3>
+              <p>Žáci pomocí AI tvořili vizuální plakáty, které pracují s emocemi a upozorňují na rizika dezinformací.</p>
+            </div>
+          </article>
+          <article class="student-work-card">
+            <img src="images/galerie/zaci/fotoalbum-8/WhatsApp_Image_2026_05_27_at_14_23_20__2_.jpeg" alt="Vizuální výstup žáků k tématu dezinformací a umělé inteligence" loading="lazy">
+            <div class="student-work-card-copy">
+              <h3>Vizuálně proti dezinformacím</h3>
+              <p>Vlastními návrhy žáci ukazovali, jak může umělá inteligence pomáhat upozorňovat na manipulaci v online prostředí.</p>
+            </div>
+          </article>
+          <article class="student-work-card">
+            <img src="images/galerie/zaci/fotoalbum-7/20260427_081244.jpg" alt="Žákovský návrh oblečení pro zimní olympijské hry" loading="lazy">
+            <div class="student-work-card-copy">
+              <h3>Od skici k olympijské kolekci</h3>
+              <p>Žáci navrhli vlastní oblečení pro české reprezentanty a pomocí AI proměnili papírové skici v realistické návrhy.</p>
+            </div>
+          </article>
+          <article class="student-work-card">
+            <img src="images/galerie/zaci/fotoalbum-10/20260603_101827.jpg" alt="Žákovská kresba postavičky připravené k animaci" loading="lazy">
+            <div class="student-work-card-copy">
+              <h3>Vlastní postavičky ožívají</h3>
+              <p>Děti nakreslily vlastní postavy a vyzkoušely si, jak jim pomocí AI vdechnout pohyb a život.</p>
+            </div>
+          </article>
+        </div>
+        <p class="student-work-more"><a class="site-card-link" href="fotografie.html">Prohlédnout všechny práce a projekty žáků →</a></p>
       </div>
     </section>
 
