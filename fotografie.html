@@ -18,15 +18,18 @@
     .gallery-empty p { margin: 0; }
     .gallery-empty strong { display: block; margin-bottom: 4px; color: var(--navy); font-weight: 700; }
     .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-    .student-carousel { position: relative; }
-    .student-carousel-viewport { overflow: hidden; }
-    .student-carousel-track { display: flex; gap: 16px; transition: transform .35s ease; }
-    .student-carousel-track figure { flex: 0 0 calc((100% - 32px) / 3); min-width: 0; margin: 0; overflow: hidden; border-radius: var(--radius-md); background: #e2e8f0; }
-    .student-carousel-track img { display: block; width: 100%; height: 240px; object-fit: cover; cursor: zoom-in; }
-    .student-carousel-controls { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }
-    .student-carousel-controls button { width: 38px; height: 38px; border: 0; border-radius: 50%; background: #172554; color: #fff; font-size: 22px; cursor: pointer; }
-    .student-carousel-controls button:disabled { opacity: .35; cursor: default; }
-    .student-carousel-controls[hidden] { display: none; }
+    .album-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .album-card { overflow: hidden; border: 1px solid #e2e8f0; border-radius: var(--radius-lg); background: #fff; box-shadow: 0 4px 14px rgba(15, 23, 42, .05); }
+    .album-card summary { min-height: 142px; display: flex; align-items: center; gap: 14px; padding: 20px; cursor: pointer; list-style: none; }
+    .album-card summary::-webkit-details-marker { display: none; }
+    .album-card summary::marker { content: ""; }
+    .album-folder-icon { flex: 0 0 48px; width: 48px; height: 48px; display: grid; place-items: center; border-radius: 14px; background: #eff6ff; font-size: 1.55rem; }
+    .album-card summary strong { display: block; color: var(--navy); font-size: 1rem; }
+    .album-card summary span.album-description { display: block; margin-top: 4px; color: var(--muted); font-size: .9rem; line-height: 1.45; }
+    .album-card summary::after { content: "+"; margin-left: auto; color: var(--navy); font-size: 1.5rem; font-weight: 400; }
+    .album-card[open] summary::after { content: "−"; }
+    .album-content { padding: 0 20px 20px; }
+    .album-content .gallery-empty { min-height: 110px; padding: 18px; }
     .gallery-grid figure { margin: 0; overflow: hidden; border-radius: var(--radius-md); background: #e2e8f0; }
     .gallery-grid img { display: block; width: 100%; height: 240px; object-fit: cover; }
     .gallery-grid img { cursor: zoom-in; transition: transform .2s ease; }
@@ -36,8 +39,8 @@
     .photo-lightbox img { display: block; max-width: 100%; max-height: calc(90vh - 64px); width: auto; height: auto; margin: 0 auto; object-fit: contain; }
     .photo-lightbox-close { position: absolute; top: 8px; right: 8px; width: 34px; height: 34px; border: 0; border-radius: 50%; background: #fff; color: #172554; font-size: 24px; line-height: 1; cursor: pointer; }
     .photo-lightbox-close:focus-visible { outline: 3px solid #facc15; outline-offset: 3px; }
-    @media (max-width: 760px) { .gallery-main { padding: 34px 0 54px; } .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .gallery-grid img { height: 190px; } .student-carousel-track img { height: 190px; } }
-    @media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } .gallery-grid img { height: auto; max-height: 300px; } .student-carousel-track { gap: 8px; } .student-carousel-track figure { flex-basis: calc((100% - 16px) / 3); } .student-carousel-track img { height: 120px; } .gallery-heading { align-items: flex-start; } }
+    @media (max-width: 760px) { .gallery-main { padding: 34px 0 54px; } .gallery-grid, .album-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } .gallery-grid img { height: 190px; } }
+    @media (max-width: 480px) { .gallery-grid, .album-list { grid-template-columns: 1fr; } .gallery-grid img { height: auto; max-height: 300px; } .gallery-heading { align-items: flex-start; } .album-card summary { min-height: 112px; } }
   </style>
 </head>
 <body>
@@ -57,20 +60,37 @@
           <span class="gallery-icon mint" aria-hidden="true">🎒</span>
           <h1 id="gallery-students">Žáci a svět AI</h1>
         </div>
-        <!-- Fotografie žáků přidávej do složky images/galerie/zaci/ a jejich cesty vlož jako src obrázků. -->
-        <div class="student-carousel" id="student-carousel">
-          <div class="student-carousel-viewport">
-            <div class="student-carousel-track" id="student-carousel-track">
-              <!-- Fotografie žáků vkládej jako jednotlivé figure sem; současně budou vidět vždy tři. -->
+        <div class="album-list">
+          <details class="album-card">
+            <summary>
+              <span class="album-folder-icon" aria-hidden="true">🔎</span>
+              <span><strong>Objevujeme AI</strong><span class="album-description">První setkání s umělou inteligencí</span></span>
+            </summary>
+            <div class="album-content">
+              <div class="gallery-empty"><p><strong>Fotografie budou doplněny.</strong>Momentky z objevování světa AI.</p></div>
+              <!-- Fotografie pro tuto akci vkládej do images/galerie/zaci/objevujeme-ai/ -->
             </div>
-          </div>
-          <div class="gallery-empty" id="student-gallery-empty">
-            <p><strong>Fotografie budou doplněny.</strong>Sem přijdou momentky z aktivit a workshopů se žáky.</p>
-          </div>
-          <div class="student-carousel-controls" id="student-carousel-controls" hidden>
-            <button type="button" id="student-carousel-prev" aria-label="Předchozí fotografie">‹</button>
-            <button type="button" id="student-carousel-next" aria-label="Další fotografie">›</button>
-          </div>
+          </details>
+          <details class="album-card">
+            <summary>
+              <span class="album-folder-icon" aria-hidden="true">🎨</span>
+              <span><strong>Tvoříme s AI</strong><span class="album-description">Nápady, tvoření a žákovské projekty</span></span>
+            </summary>
+            <div class="album-content">
+              <div class="gallery-empty"><p><strong>Fotografie budou doplněny.</strong>Ukázky tvoření a práce žáků.</p></div>
+              <!-- Fotografie pro tuto akci vkládej do images/galerie/zaci/tvorime-s-ai/ -->
+            </div>
+          </details>
+          <details class="album-card">
+            <summary>
+              <span class="album-folder-icon" aria-hidden="true">💻</span>
+              <span><strong>AI ve škole</strong><span class="album-description">Společné aktivity a školní projekty</span></span>
+            </summary>
+            <div class="album-content">
+              <div class="gallery-empty"><p><strong>Fotografie budou doplněny.</strong>Další školní aktivity s umělou inteligencí.</p></div>
+              <!-- Fotografie pro tuto akci vkládej do images/galerie/zaci/ai-ve-skole/ -->
+            </div>
+          </details>
         </div>
       </section>
 
@@ -104,31 +124,7 @@
     const photoLightbox = document.getElementById('photo-lightbox');
     const photoLightboxImage = document.getElementById('photo-lightbox-image');
     const photoLightboxClose = photoLightbox.querySelector('.photo-lightbox-close');
-    const studentTrack = document.getElementById('student-carousel-track');
-    const studentControls = document.getElementById('student-carousel-controls');
-    const studentEmpty = document.getElementById('student-gallery-empty');
-    const studentPrev = document.getElementById('student-carousel-prev');
-    const studentNext = document.getElementById('student-carousel-next');
-    let studentIndex = 0;
-
-    function updateStudentCarousel() {
-      const photos = studentTrack.querySelectorAll('figure');
-      const maxIndex = Math.max(0, photos.length - 3);
-      studentIndex = Math.min(studentIndex, maxIndex);
-      const step = photos.length ? photos[0].getBoundingClientRect().width + parseFloat(getComputedStyle(studentTrack).gap || 0) : 0;
-      studentTrack.style.transform = `translateX(-${studentIndex * step}px)`;
-      studentPrev.disabled = studentIndex === 0;
-      studentNext.disabled = studentIndex >= maxIndex;
-      studentControls.hidden = photos.length <= 3;
-      studentEmpty.hidden = photos.length > 0;
-    }
-
-    studentPrev.addEventListener('click', () => { studentIndex = Math.max(0, studentIndex - 1); updateStudentCarousel(); });
-    studentNext.addEventListener('click', () => { studentIndex = Math.min(studentTrack.querySelectorAll('figure').length - 3, studentIndex + 1); updateStudentCarousel(); });
-    updateStudentCarousel();
-    window.addEventListener('resize', updateStudentCarousel);
-
-    document.querySelectorAll('.gallery-grid img, .student-carousel-track img').forEach((photo) => {
+    document.querySelectorAll('.gallery-grid img').forEach((photo) => {
       photo.addEventListener('click', () => {
         photoLightboxImage.src = photo.src;
         photoLightboxImage.alt = photo.alt;
