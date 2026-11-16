@@ -3,11 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="refresh" content="0; url=dve-tvare-umele-inteligence.html">
-<link rel="canonical" href="https://zspastelka.github.io/ai-na-pastelce/dve-tvare-umele-inteligence.html">
-<title>Dvě tváře umělé inteligence</title>
+<meta name="description" content="Dvě tváře umělé inteligence – výstava plakátů žáků o příležitostech a rizicích umělé inteligence.">
+<title>Dvě tváře umělé inteligence | AI na Pastelce</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#f4f6f8;margin:0;padding:20px}
+.page{width:100%}
+.header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:10px}
+.header-left img,.header-right img{height:60px}
+.header-left{text-align:left}
+.support-text{font-size:11px}
+.header-center{text-align:center;flex:1}
+.header-center h1{margin:0}
+.header-center h2{margin:5px 0 0;font-size:18px;color:#555;font-weight:400}
+.header-right{text-align:right}
+#method{background:#eef3ff;border-left:6px solid #4a90e2;padding:15px;margin:20px 0}
+#method p{margin:7px 0 0}
+.section-title{margin:20px 0;font-size:1.5em;color:inherit}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.case{background:white;padding:10px;border-radius:10px;text-align:center}
+.case img{width:100%;height:220px;object-fit:contain;background:#eee;border-radius:8px;cursor:pointer;display:block}
+.case h3{margin-block-start:1em;margin-block-end:1em}
+#summary{margin:20px 0;padding:0;background:transparent}
+#summary h2{margin-block-start:.83em;margin-block-end:.83em;font-size:1.5em;color:inherit}
+#summary p{margin-block-start:1em;margin-block-end:1em}
+.closing{margin:20px 0;padding:0;background:transparent;border:0;font-weight:700;color:inherit}
+#viewer{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:10;background:rgba(0,0,0,.9);justify-content:center;align-items:center;padding:20px}
+#viewer.open{display:flex}
+#viewer img{max-width:90%;max-height:90%;object-fit:contain}
+#close{position:absolute;top:20px;right:30px;color:white;font-size:30px;cursor:pointer;background:transparent;border:0}
+.viewer-caption{position:absolute;bottom:12px;left:15px;right:15px;text-align:center;color:white;font-weight:700}
+.footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #d8dee8;padding:18px 0 5px;margin-top:25px;color:inherit;font-size:16px}
+.footer a{color:#0645ad}
+@media(max-width:650px){.header{justify-content:center}.header-left,.header-right{flex:1 1 40%}.header-center{order:3;flex-basis:100%}.header-right{text-align:right}}
+</style>
 </head>
 <body>
-<p>Stránka byla přejmenována. <a href="dve-tvare-umele-inteligence.html">Pokračovat na stránku Dvě tváře umělé inteligence</a>.</p>
+<div class="page">
+  <div class="header">
+    <div class="header-left">
+      <img src="images/o2-chytra-skola-logo.png" alt="O2 Chytrá škola">
+      <div class="support-text">Podpořeno z programu O2 Chytrá škola.</div>
+    </div>
+    <div class="header-center">
+      <h1>Dvě tváře umělé inteligence</h1>
+      <h2><b>Jak žáci přemýšlejí o umělé inteligenci</b></h2>
+    </div>
+    <div class="header-right"><img src="https://raw.githubusercontent.com/zspastelka/Od-kresby-k-AI-realit-/main/logo-zs-pastelka.png" alt="Logo ZŠ a MŠ Mladá Boleslav"></div>
+  </div>
+
+  <div id="method">
+    <b>Jak jsme pracovali:</b>
+    <p>Osmáci se zamýšleli nad tím, jak umělá inteligence ovlivňuje náš každodenní život. Ve vlastních plakátech zachytili její možnosti, příležitosti i rizika – od pomoci při práci a tvorbě až po manipulaci, deepfake a otázky důvěryhodnosti informací.</p>
+  </div>
+
+  <h2 class="section-title">Plakáty našich žáků</h2>
+  <div class="grid" id="board">
+    <article class="case"><img src="images/ai-ocima-osmaku/01.jpg" alt="Žákovský plakát: AI v pracovním světě" loading="lazy"><h3>AI v pracovním světě</h3></article>
+    <article class="case"><img src="images/ai-ocima-osmaku/02.jpg" alt="Žákovský plakát: Když člověk přemýšlí s AI" loading="lazy"><h3>Když člověk přemýšlí s AI</h3></article>
+    <article class="case"><img src="images/ai-ocima-osmaku/03.jpg" alt="Žákovský plakát: Vliv AI na naše názory" loading="lazy"><h3>Vliv AI na naše názory</h3></article>
+    <article class="case"><img src="images/ai-ocima-osmaku/04.jpg" alt="Žákovský plakát: Jak poznat obsah vytvořený AI" loading="lazy"><h3>Jak poznat obsah vytvořený AI</h3></article>
+    <article class="case"><img src="images/ai-ocima-osmaku/05.jpg" alt="Žákovský plakát: Když se nedá věřit tomu, co vidíme" loading="lazy"><h3>Když se nedá věřit tomu, co vidíme</h3></article>
+    <article class="case"><img src="images/ai-ocima-osmaku/06.jpg" alt="Žákovský plakát: Deepfake a manipulace s videem" loading="lazy"><h3>Deepfake a manipulace s videem</h3></article>
+    <article class="case"><img src="images/ai-ocima-osmaku/07.jpg" alt="Žákovský plakát: Jak AI ovlivňuje naši představivost" loading="lazy"><h3>Jak AI ovlivňuje naši představivost</h3></article>
+    <article class="case"><img src="images/ai-ocima-osmaku/08.jpg" alt="Žákovský plakát: Člověk a umělá inteligence" loading="lazy"><h3>Člověk a umělá inteligence</h3></article>
+    <article class="case"><img src="images/ai-ocima-osmaku/09.jpg" alt="Žákovský plakát: AI v našem každodenním životě" loading="lazy"><h3>AI v našem každodenním životě</h3></article>
+    <article class="case"><img src="images/ai-ocima-osmaku/10.jpg" alt="Žákovský plakát: Emoce a rozhodování" loading="lazy"><h3>Emoce a rozhodování</h3></article>
+    <article class="case"><img src="images/ai-ocima-osmaku/11.jpg" alt="Žákovský plakát: Příležitosti a rizika AI" loading="lazy"><h3>Příležitosti a rizika AI</h3></article>
+    <article class="case"><img src="images/ai-ocima-osmaku/12.jpg" alt="Žákovský plakát: Umělá inteligence a budoucnost práce" loading="lazy"><h3>Umělá inteligence a budoucnost práce</h3></article>
+  </div>
+
+  <section id="summary">
+    <h2>Co nám práce žáků ukázaly?</h2>
+    <p>Plakáty ukazují, že žáci vnímají umělou inteligenci jako nástroj, který může pomáhat při práci, učení i tvorbě. Zároveň si uvědomují, že její výstupy je potřeba posuzovat s odstupem a přemýšlet nad tím, kdo a za jakým účelem je vytváří.</p>
+    <p>Mezi důležitá témata patří důvěryhodnost obrázků a videí, možnost manipulace, ochrana soukromí i vliv AI na naše názory a rozhodování. Žáci tak nezůstali jen u toho, co všechno AI dokáže, ale zaměřili se také na odpovědnost člověka, který ji používá.</p>
+    <p><b>Hlavní myšlenka:</b> Umělá inteligence může být užitečným pomocníkem, ale přemýšlet za nás nemůže. Je důležité ověřovat informace, chránit své soukromí a nenechat se přesvědčit vším, co na obrazovce vidíme.</p>
+  </section>
+
+  <div class="closing">„Ne všechno, co vidíme, je skutečné. A ne všechno, co vypadá skutečně, je pravda.“</div>
+
+  <div class="footer">
+    <span><b>AI na Pastelce</b> · Vzdělávací projekt ZŠ a MŠ Mladá Boleslav, 17. listopadu 1325.</span>
+    <a href="index.html">← Zpět na hlavní stránku</a>
+  </div>
+</div>
+
+<div id="viewer" role="dialog" aria-modal="true" aria-label="Zvětšený plakát">
+  <button id="close" type="button" aria-label="Zavřít">×</button>
+  <img id="bigImg" src="" alt="">
+  <div class="viewer-caption" id="viewerCaption"></div>
+</div>
+<script>
+const viewer=document.getElementById("viewer");
+const bigImg=document.getElementById("bigImg");
+const caption=document.getElementById("viewerCaption");
+document.querySelectorAll(".case img").forEach(img=>{
+  img.addEventListener("click",()=>{
+    bigImg.src=img.src;
+    bigImg.alt=img.alt;
+    caption.textContent=img.alt.replace("Žákovský plakát: ","");
+    viewer.classList.add("open");
+    document.body.style.overflow="hidden";
+  });
+});
+function closeViewer(){
+  viewer.classList.remove("open");
+  bigImg.src="";
+  document.body.style.overflow="";
+}
+document.getElementById("close").addEventListener("click",closeViewer);
+viewer.addEventListener("click",event=>{if(event.target===viewer)closeViewer();});
+document.addEventListener("keydown",event=>{if(event.key==="Escape")closeViewer();});
+</script>
 </body>
 </html>
