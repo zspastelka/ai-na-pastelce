@@ -15,9 +15,9 @@
     .feature{background:#eef2ff;border:1px solid #dbeafe;border-radius:22px;padding:25px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}.feature h2{margin:0 0 10px;color:var(--navy);font-size:1.7rem}.feature p{margin:0;color:#475569}.feature-art{background:linear-gradient(135deg,#d7f0e8,#fff1c7);border-radius:18px;min-height:170px;display:grid;place-items:center;font-size:4.5rem}
     .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 5px 18px rgba(15,23,42,.025)}.num{width:30px;height:30px;border-radius:50%;background:var(--navy);color:white;display:grid;place-items:center;font-weight:800;margin-bottom:12px}.step h3{margin:0 0 6px;color:var(--navy);font-size:1.05rem}.step p{margin:0;color:var(--muted);font-size:.94rem}.notice{border-left:4px solid #e5bd4e;background:#fff8e5;padding:17px 20px;border-radius:0 14px 14px 0;color:#66562c;margin-top:22px}
     .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.gallery article{background:white;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 5px 18px rgba(15,23,42,.025)}.gallery .emoji{font-size:2rem}.gallery h3{margin:10px 0 6px;color:var(--navy);font-size:1.08rem}.gallery p{margin:0;color:var(--muted);font-size:.94rem}
-    .cta{background:var(--navy);color:white;border-radius:22px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:24px}.cta h2{margin:0 0 6px;font-size:1.65rem}.cta p{margin:0;color:#d5e0ec}.button{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:850;text-decoration:none;padding:12px 18px;border-radius:12px;white-space:nowrap}
+    .reflection{background:#eef2ff;border:1px solid #dbeafe;border-radius:22px;padding:25px;margin-top:42px}.reflection h2{color:var(--navy);margin:0 0 8px}.reflection p{color:#475569;margin:0}.reflection ul{margin:12px 0 0;padding-left:22px;color:#334155}
     footer{background:var(--navy);color:#cbd5e1;padding:25px 0;font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.foot a{color:#dbeafe;text-decoration:none;font-weight:650}.foot a:hover{text-decoration:underline}
-    @media(max-width:700px){.nav{padding:14px 0;align-items:flex-start;flex-direction:column}.section-head{display:block}.section-head p{margin-top:8px}.grid,.feature,.steps,.gallery{grid-template-columns:1fr}.hero{padding:48px 0}.cta{align-items:flex-start;flex-direction:column}.wrap{width:min(100% - 28px,1080px)}}
+    @media(max-width:700px){.nav{padding:14px 0;align-items:flex-start;flex-direction:column}.section-head{display:block}.section-head p{margin-top:8px}.grid,.feature,.steps,.gallery{grid-template-columns:1fr}.hero{padding:48px 0}.wrap{width:min(100% - 28px,1080px)}}
   </style>
 </head>
 <body>
@@ -46,7 +46,7 @@
       <article><div class="emoji">🔍</div><h3>AI není dokonalá</h3><p>Porovnávání výsledků, hledání nepřesností a rozlišování mezi vlastním záměrem a tím, co doplnila umělá inteligence.</p></article>
     </div></div></section>
 
-    <section style="padding-top:0"><div class="wrap"><div class="cta"><div><h2>🎨 Výzva na závěr</h2><p>Vyber si jeden z nástrojů a vytvoř vlastní obrázek nebo animaci. Potom se zamysli:</p><p style="margin-top:10px">Co jsi do výsledku vložil/a ty? Co za tebe navrhl nebo změnil nástroj? A co bys při dalším pokusu udělal/a jinak?</p></div><a class="button" href="hraj-si-s-ai.html">Pokračovat v objevování AI →</a></div></div></section>
+    <section style="padding-top:0"><div class="wrap"><div class="reflection"><h2>🎨 Výzva na závěr</h2><p>Vyber si jeden z nástrojů a vytvoř vlastní obrázek nebo animaci. Potom se zamysli nad těmito otázkami:</p><ul><li>Co jsi do výsledku vložil/a ty?</li><li>Co za tebe navrhl nebo změnil nástroj?</li><li>Co bys při dalším pokusu udělal/a jinak?</li></ul></div></div></section>
   </main>
   <footer><div class="wrap foot"><span><strong>AI na Pastelce</strong> · Vzdělávací projekt ZŠ a MŠ Mladá Boleslav, 17. listopadu 1325.</span><a href="index.html">Zpět na úvodní stránku ↑</a></div></footer>
 </body>
